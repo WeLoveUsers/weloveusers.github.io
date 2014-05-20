@@ -287,4 +287,31 @@ h3 {
         margin-bottom: 70px;
         padding-top: 50px;
     }
+    .methodes .methode {
+      display: block;
+      float:none;
+      width: auto;
+      height: auto;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+    .methodes .methode:first-of-type {
+      width: auto;
+      margin-left: 0;
+    }
+    .methodes .methode:last-of-type {
+      width: auto;
+    }
+    .methodes .methode img {
+        float:left;
+        margin-right:15px;
+    }
+    .methodes .methode .methode-description {
+      border-right: 0;
+      height: auto;
+      padding-right: 0;
+    }
+    .methodes .methode:last-of-type .methode-description {
+      border-right: 0;
+    }
 }
