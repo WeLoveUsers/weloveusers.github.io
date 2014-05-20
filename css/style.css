@@ -268,8 +268,22 @@ h3 {
  * Variations
  */
 @media (max-width: 1140px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .row-wrapper-inner {
         width: 100%;
         text-align: left;
+    }
+    /*
+     * Accueil
+     */
+    .accueil h2 {
+        width: auto;
+        margin-left: 15%;
+        margin-right: 10%;
+        margin-bottom: 70px;
+        padding-top: 50px;
     }
 }
