@@ -13,7 +13,8 @@ html, body {
 h2, .accueil h2, h3,
 .row-wrapper-inner .titre-section,
 .contact .vcard .role,
-.contact .vcard .fn {
+.contact .vcard .fn,
+.contact .titre-position {
   font-family: 'Muli', "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   font-weight: normal;
 }
@@ -241,16 +242,21 @@ h3 {
   font-weight: normal;
 }
 .contact .vcard .photo {
-    border: 1px #fff solid;
-    float: left;
+  border: 1px #fff solid;
+  float: left;
+  margin-right: 15px;
 }
 .contact .vcard .fn {
-    display:block;
-    font-size: 26px;
+  display: block;
+  font-size: 20px;
 }
 .contact .vcard .role {
-    display:block;
-    font-size: 18px;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.contact .titre-position {
+  font-size: 14px;
 }
 .contact .copyright {
   margin-top: 20px;
