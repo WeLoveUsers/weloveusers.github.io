@@ -1,0 +1,304 @@
+/*
+ * Globals
+ */
+
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_9785">Text with this font applied</p> */
+.navigation,
+h2, .accueil h2, h3,
+.row-wrapper-inner .titre-section {
+  font-family: 'Muli', "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+
+}
+
+.align-center {
+  text-align: center;
+}
+
+/*
+ * Base structure
+ */
+
+html, body {
+  color: #636363;
+  font-family: 'PT Serif', serif;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.row-wrapper {
+  text-align: center;
+}
+.row-wrapper-inner {
+  width: 1140px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row-wrapper-inner .titre-section {
+  width: 208px;
+  display: block;
+  padding-left: 8px;
+  font-size: 34px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+.ancre{
+  display: block;
+  height: 58px; /*same height as header*/
+  margin-top: -58px; /*same height as header*/
+  visibility: hidden;
+}
+
+/*
+ * Header
+ */
+#header {
+  border-bottom: 1px #eaeaea solid;
+  background-color: #fff;
+}
+#header h1.marque {
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 18px;
+  display: block;
+  float: left;
+}
+#header .navigation {
+  display: block;
+  margin-top: 30px;
+  margin-left: 60px;
+  float: left;
+  font-size: 20px;
+  font-weight: normal;
+}
+#header .navigation .nav > li {
+  display: inline-block;
+}
+#header .navigation .nav > li + li {
+  margin-left: 20px;
+}
+#header .navigation .nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 20px;
+  line-height: 10px;
+  color: #636363;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+  border-radius: 0;
+}
+#header .navigation .nav > li > a:hover,
+#header .navigation .nav > li > a:focus {
+  border-bottom-color: #e1eb8e;
+  background-color: transparent;
+  text-decoration: none;
+}
+#header .navigation .nav > .active > a,
+#header .navigation .nav > .active > a:hover,
+#header .navigation .nav > .active > a:focus {
+  color: #636363;
+  border-bottom-color: #e1eb8e;
+}
+
+@media (min-width: 768px) {
+
+}
+
+/*
+ * Spotlight
+ */
+.accueil {
+  margin-top: 84px;
+  background-color: #fff;
+  background-image: url('../images/spotlight-gradient-bg.gif');
+  background-repeat: repeat-x;
+  background-position: top;
+}
+.accueil h2 {
+  font-size: 34px;
+  font-weight: normal;
+  width: 800px;
+  margin-left: 170px;
+  margin-bottom: 70px;
+  padding-top: 90px;
+  line-height: 60px;
+}
+
+/*
+ * Methodes
+ */
+.methodes {
+  background-color: #f7f7f7;
+  background-image: url('../images/methodes-pattern-bg.gif');
+  height: 530px;
+  margin-top: 30px;
+}
+.methodes .titre-section {
+  background: #7fdee7;
+  color: #fff;
+}
+
+.methodes ul li {
+  list-style-image: url('../images/ui/puce-bleue.gif');
+}
+
+.methodes .methode {
+  display: block;
+  float:left;
+  width: 374px;
+  height: 400px;
+  margin-top: 0;
+  margin-left: 14px;
+}
+.methodes .methode:first-of-type {
+  width: 374px;
+  margin-left: 0;
+}
+.methodes .methode:last-of-type {
+  width: 360px
+}
+.methodes .methode .methode-description {
+  border-right: 3px #7fdee7 solid;
+  height: 240px;
+  padding-right: 14px;
+}
+.methodes .methode .methode-description p {
+  text-align: justify;
+}
+.methodes .methode:last-of-type .methode-description {
+  border-right: 0;
+}
+/*
+ * Valeurs
+ */
+.valeurs {
+  background-color: #ffffff;
+  background-image: url('../images/valeurs-bg.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 530px;
+  margin-top: 30px;
+  position: relative;
+}
+.valeurs .titre-section {
+  background: #d1d5b0;
+  color: #fff;
+}
+.valeurs h3 {
+  font-size: 34px;
+  position: absolute;
+}
+.valeurs h3.valeur1 {
+  top: 120px;
+  margin-left: 36px;
+}
+.valeurs h3.valeur3 {
+  margin-left: 658px;
+  top: 120px;
+}
+.valeurs h3.valeur2 {
+  margin-left: 360px;
+  top: 330px;
+}
+.valeurs h3.valeur4 {
+  margin-left: 960px;
+  top: 330px;
+}
+/*
+ * Contact
+ */
+.contact {
+  background-color: #636363;
+  height: 530px;
+  margin-top: 30px;
+  color: #fff;
+}
+.contact .titre-section {
+  background: #808080;
+  color: #fff;
+}
+.contact p {
+  text-align: justify;
+}
+.contact a {
+  color: #e1eb8e;
+  text-decoration: underline;
+}
+
+.contact a.btn-default,
+.contact a.btn-default:hover,
+.contact a.btn-default:focus {
+  color: #636363;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #e1eb8e;
+  border: 0;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: normal;
+}
+.contact .copyright {
+  margin-top: 20px;
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+@media (max-width: 500px) {
+  .cover-heading img {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
