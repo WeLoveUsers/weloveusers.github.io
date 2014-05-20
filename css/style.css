@@ -2,25 +2,24 @@
  * Globals
  */
 
-/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_9785">Text with this font applied</p> */
+html, body {
+  color: #636363;
+  font-family: 'PT Serif', serif;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: normal;
+}
 .navigation,
 h2, .accueil h2, h3,
-.row-wrapper-inner .titre-section {
+.row-wrapper-inner .titre-section,
+.contact .vcard .role,
+.contact .vcard .fn {
   font-family: 'Muli', "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   font-weight: normal;
 }
-
 h3 {
   font-size: 20px;
 }
-
-/* Links */
-a,
-a:focus,
-a:hover {
-
-}
-
 .align-center {
   text-align: center;
 }
@@ -28,15 +27,6 @@ a:hover {
 /*
  * Base structure
  */
-
-html, body {
-  color: #636363;
-  font-family: 'PT Serif', serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: normal;
-}
-
 .row-wrapper {
   text-align: center;
 }
@@ -118,7 +108,7 @@ html, body {
 }
 
 /*
- * Spotlight
+ * Accueil
  */
 .accueil {
   margin-top: 84px;
@@ -181,6 +171,7 @@ html, body {
 .methodes .methode:last-of-type .methode-description {
   border-right: 0;
 }
+
 /*
  * Valeurs
  */
@@ -217,6 +208,7 @@ html, body {
   margin-left: 960px;
   top: 330px;
 }
+
 /*
  * Contact
  */
@@ -237,7 +229,6 @@ html, body {
   color: #e1eb8e;
   text-decoration: underline;
 }
-
 .contact a.btn-default,
 .contact a.btn-default:hover,
 .contact a.btn-default:focus {
@@ -249,19 +240,21 @@ html, body {
   font-size: 30px;
   font-weight: normal;
 }
+.contact .vcard .photo {
+    border: 1px #fff solid;
+    float: left;
+}
+.contact .vcard .fn {
+    display:block;
+    font-size: 26px;
+}
+.contact .vcard .role {
+    display:block;
+    font-size: 18px;
+}
 .contact .copyright {
   margin-top: 20px;
 }
-
-/*
- * Footer
- */
-
-.mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
-}
-
 
 /*
  * Affix and center
