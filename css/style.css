@@ -277,6 +277,14 @@ h3 {
         padding-left: 15px;
         padding-right: 15px;
     }
+    .row-wrapper-inner .titre-section {
+      width: 208px;
+      display: block;
+      padding-left: 8px;
+      font-size: 34px;
+      line-height: 60px;
+      margin-bottom: 15px;
+    }
     /*
      * Accueil
      */
@@ -284,7 +292,7 @@ h3 {
         width: auto;
         margin-left: 15%;
         margin-right: 10%;
-        margin-bottom: 70px;
+        margin-bottom: 20px;
         padding-top: 50px;
     }
     .methodes {
@@ -296,9 +304,10 @@ h3 {
       float:none;
       clear: left;
       width: auto;
-      height: auto;
+      height: 200px;
       margin-top: 10px;
       margin-left: 0;
+      border-bottom: 1px #7fdee7 solid;
     }
     .methodes .methode:first-of-type {
       width: auto;
@@ -306,24 +315,47 @@ h3 {
     }
     .methodes .methode:last-of-type {
       width: auto;
+      border-bottom: 0;
     }
     .methodes .methode img {
-        float:right;
-        margin-left:25px;
-        margin-right:0;
-    }
-    .methodes .methode:first-of-type img,
-    .methodes .methode:last-of-type img {
         float:left;
-        margin-right:25px;
-        margin-left:0;
     }
+
     .methodes .methode .methode-description {
       border-right: 0;
       height: auto;
       padding-right: 0;
+      margin-left:380px;
     }
     .methodes .methode:last-of-type .methode-description {
       border-right: 0;
+    }
+}
+@media (max-width: 950px) {
+    .accueil h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .methodes .methode {
+      height: auto;
+      margin-bottom: 35px;
+      border: 0;
+    }
+    .methodes .methode img {
+        float:right;
+    }
+    .methodes .methode:first-of-type img,
+    .methodes .methode:last-of-type img {
+        float:left;
+    }
+    .methodes .methode .methode-description {
+      margin-right:380px;
+      margin-left:0;
+    }
+    .methodes .methode:first-of-type .methode-description,
+    .methodes .methode:last-of-type .methode-description {
+      border-right: 0;
+      margin-left:380px;
+      margin-right:0;
     }
 }
