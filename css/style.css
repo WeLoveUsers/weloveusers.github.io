@@ -70,7 +70,7 @@ h3 {
 #header .navigation {
   display: block;
   margin-top: 30px;
-  margin-left: 60px;
+  margin-left: 80px;
   float: left;
   font-size: 20px;
   font-weight: normal;
@@ -103,7 +103,9 @@ h3 {
   color: #636363;
   border-bottom-color: #e1eb8e;
 }
-
+#header .mobile-phone-link {
+  display: none;
+}
 /*
  * Accueil
  */
@@ -167,6 +169,7 @@ h3 {
 }
 .methodes .methode:last-of-type .methode-description {
   border-right: 0;
+  padding-right: 0;
 }
 
 /*
@@ -267,95 +270,324 @@ h3 {
 /*
  * Variations
  */
-@media (max-width: 1140px) {
-    h1.marque {
-        padding-left: 15px;
-    }
+@media (max-width: 1200px) {
     .row-wrapper-inner {
-        width: 100%;
-        text-align: left;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .row-wrapper-inner .titre-section {
-      width: 208px;
-      display: block;
-      padding-left: 8px;
-      font-size: 34px;
-      line-height: 60px;
-      margin-bottom: 15px;
+      width: 960px;
     }
     /*
      * Accueil
      */
     .accueil h2 {
-        width: auto;
-        margin-left: 15%;
-        margin-right: 10%;
-        margin-bottom: 20px;
-        padding-top: 50px;
+      margin-left: 15%;
+      margin-right: 10%;
+      padding-top: 25px;
+      margin-bottom: 30px;
+      width: auto;
     }
     .methodes {
-      height: auto;
-      margin-top: 30px;
+      height: 550px;
+
     }
-    .methodes .methode {
-      display: block;
-      float:none;
-      clear: left;
-      width: auto;
-      height: 200px;
-      margin-top: 10px;
-      margin-left: 0;
-      border-bottom: 1px #7fdee7 solid;
+    .methodes .methode,
+    .methodes .methode:first-of-type,
+    .methodes .methode:last-of-type {
+      width: 315px;
+      height: 480px;
+      margin-top: 0;
+      margin-left: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+    .methodes .methode img {
+      position: absolute;
+      right: 14px;
+    }
+    .methodes .methode:last-of-type img {
+      left: 0;
     }
     .methodes .methode:first-of-type {
-      width: auto;
+      width: 315px;
       margin-left: 0;
     }
     .methodes .methode:last-of-type {
-      width: auto;
-      border-bottom: 0;
+      width: 301px;
     }
-    .methodes .methode img {
-        float:left;
-    }
-
     .methodes .methode .methode-description {
-      border-right: 0;
-      height: auto;
-      padding-right: 0;
-      margin-left:380px;
+      height: 260px;
+      margin-top:180px;
     }
     .methodes .methode:last-of-type .methode-description {
       border-right: 0;
     }
+    /*
+     * Valeurs
+     */
+    .valeurs {
+      background-position: center 150px;
+      height: 410px;
+      margin-top: 20px;
+      position: relative;
+      background-size:960px 152px;
+    }
+    .valeurs h3.valeur1 {
+      top: 100px;
+      margin-left: 16px;
+    }
+    .valeurs h3.valeur3 {
+      margin-left: 540px;
+      top: 100px;
+    }
+    .valeurs h3.valeur2 {
+      margin-left: 290px;
+      top: 270px;
+    }
+    .valeurs h3.valeur4 {
+      margin-left: 790px;
+      top: 270px;
+    }
+    .contact {
+      height: auto;
+      padding-bottom: 15px;
+    }
+
 }
-@media (max-width: 950px) {
+@media (max-width: 992px) {
+    .row-wrapper-inner {
+      width: 750px;
+    }
     .accueil h2 {
         font-size: 28px;
         line-height: 42px;
+        margin-bottom: 0px;
     }
-    .methodes .methode {
+    .methodes {
       height: auto;
-      margin-bottom: 35px;
+      padding-bottom: 15px;
+    }
+    .methodes .methode,
+    .methodes .methode:first-of-type,
+    .methodes .methode:last-of-type {
+      float: none;
+      display: block;
+      height: auto;
+      margin: 0 0 15px 0;
+      padding: 0; 
       border: 0;
+      width: 100%;
+      clear: left;
+      border-bottom: 3px #7fdee7 solid;
     }
-    .methodes .methode img {
-        float:right;
+    .methodes .methode:last-of-type {
+      border-bottom: 0;
     }
+    .methodes .methode h3 {
+      margin-top: 0;
+    }
+    .methodes .methode img,
     .methodes .methode:first-of-type img,
     .methodes .methode:last-of-type img {
-        float:left;
+      position: static;
+      float:left;
     }
-    .methodes .methode .methode-description {
-      margin-right:380px;
-      margin-left:0;
-    }
+    .methodes .methode .methode-description,
     .methodes .methode:first-of-type .methode-description,
     .methodes .methode:last-of-type .methode-description {
-      border-right: 0;
-      margin-left:380px;
-      margin-right:0;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      margin-left: 380px;
+      height: auto;
+    }
+    /*
+     * Valeurs
+     */
+    .valeurs {
+      background-position: center 150px;
+      height: 340px;
+      margin-top: 30px;
+      position: relative;
+      background-size: 750px 118px;
+    }
+    .valeurs h3 {
+      font-size: 26px;
+    }
+    .valeurs h3.valeur1 {
+      top: 100px;
+      margin-left: 16px;
+    }
+    .valeurs h3.valeur3 {
+      margin-left: 420px;
+      top: 100px;
+    }
+    .valeurs h3.valeur2 {
+      margin-left: 230px;
+      top: 250px;
+    }
+    .valeurs h3.valeur4 {
+      margin-left: 620px;
+      top: 250px;
+    }
+    .contact .vcard {
+      padding: 15px 0;
+      margin-bottom: 15px;
+    }
+    .contact .icone-position {
+        padding-top: 3px;
+    }
+    .contact .titre-position {
+      padding: 0;
+      margin: 0;
+    }
+    .contact a.btn-default,
+    .contact a.btn-default:hover,
+    .contact a.btn-default:focus {
+      font-size: 30px;
+      margin-top: 15px;
+    }
+}
+@media (max-width: 768px) {
+    html, body {
+      font-size: 12px;
+    }
+    .row-wrapper-inner {
+        width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #header h1.marque {
+      padding: 0;
+      margin: 0;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: block;
+      float: none;
+    }
+    #header h1.marque img {
+      width: 190px;
+    }
+    .row-wrapper-inner .titre-section {
+      width: 100%;
+      display: block;
+      padding-left: 8px;
+      font-size: 26px;
+      line-height: 42px;
+      margin-bottom: 0px;
+    }
+    #header .navigation {
+      float: none;
+      margin: 0;
+      font-size: 16px;
+      padding-bottom: 5px;
+    }
+    #header .navigation .nav > li + li {
+      margin-left: 10px;
+    }
+    #header .navigation .nav > li > a {
+      font-size: 14px;
+    }
+    #header .row-wrapper-inner {
+      position: relative;
+    }
+    #header .mobile-phone-link {
+      display: block;
+      position: absolute;
+      top: 6px;
+      right: 15px;
+    }
+    #header .mobile-phone-link a {
+      font-size: 2em;
+      color:#e1eb8e;
+      padding: 4px;
+      display: inline-block;
+      margin-left: 3px;
+    }
+    .accueil h2 {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 0;
+        padding-top: 30px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .methodes .methode h3 {
+      font-size: 17px;
+      margin-top: 14px;
+    }
+    .methodes .methode,
+    .methodes .methode:first-of-type {
+      overflow: hidden;
+      height: auto;
+      margin: 10px 0 0 0;
+      border: 0;
+    }
+    .methodes .methode img,
+    .methodes .methode:first-of-type img,
+    .methodes .methode:last-of-type img {
+      float:none;
+    }
+
+    .methodes .methode .methode-description,
+    .methodes .methode:first-of-type .methode-description,
+    .methodes .methode:last-of-type .methode-description {
+      margin: 0;  
+      padding: 0;
+      width: auto;  
+    }
+    .valeurs {
+      height: 180px;
+      background: #fff;
+      position: relative;
+      margin-top: 32px;
+    }
+
+    .valeurs h3 {
+      font-size: 22px;
+    }
+    .valeurs h3.valeur1,
+    .valeurs h3.valeur3,
+    .valeurs h3.valeur2,
+    .valeurs h3.valeur4 {
+      position: static; 
+      margin: 0;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .contact {
+      height: auto;
+    }
+    .contact .titre-section {
+      margin-bottom: 10px;
+    }
+    .contact .vcard {
+      padding: 8px 0;
+      border-top: 4px #808080 solid;
+      border-bottom: 4px #808080 solid;
+      margin-bottom: 15px;
+    }
+    .contact .vcard .photo {
+      display: none;
+    }
+    .contact .vcard .role {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    .contact .icone-position {
+        float:left;
+        margin-right: 10px;
+        padding-top: 5px;
+    }
+    .contact .titre-position {
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+    }
+    .contact a.btn-default,
+    .contact a.btn-default:hover,
+    .contact a.btn-default:focus {
+      font-size: 20px;
+      display: block;
+    }
+    .contact .copyright {
+      margin-top: 10px;
     }
 }
