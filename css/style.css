@@ -492,7 +492,7 @@ h3 {
       display: block;
       position: absolute;
       top: 6px;
-      right: 15px;
+      right: 0px;
     }
     #header .mobile-phone-link a {
       font-size: 2em;
