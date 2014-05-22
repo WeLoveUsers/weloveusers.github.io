@@ -450,7 +450,7 @@ h3 {
       font-size: 12px;
     }
     .row-wrapper-inner {
-        width: 300px;
+        width: 360px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -589,5 +589,12 @@ h3 {
     }
     .contact .copyright {
       margin-top: 10px;
+    }
+}
+@media (max-width: 400px) {
+    .row-wrapper-inner {
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
