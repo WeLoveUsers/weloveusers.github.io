@@ -144,6 +144,7 @@
   	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   	  ga('create', 'UA-754802-8', 'weloveusers.com');
+  	  ga('require', 'displayfeatures');
   	  ga('send', 'pageview');
 
       // ScrollSpy et SmoothScroll
@@ -154,14 +155,3 @@
          // store hash
          var hash = this.hash;
          // animate
-         $('html, body').animate({
-             scrollTop: $(hash).offset().top
-           }, 300, function(){
-             // when done, add hash to url
-             // (default click behaviour)
-             window.location.hash = hash;
-           });
-      });
-	  </script>
-  </body>
-</html>
