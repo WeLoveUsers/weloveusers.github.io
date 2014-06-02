@@ -513,7 +513,7 @@ h3 {
       float: none;
       display: block;
       position: absolute;
-      top: 18px;
+      top: 17px;
       right: 0;
     }
     #header .lang-nav .nav > li > a {
@@ -630,5 +630,8 @@ h3 {
         width: 290px;
         margin-right: auto;
         margin-left: auto;
+    }
+    #header .lang-nav .nav > li.active {
+      display: none;
     }
 }
