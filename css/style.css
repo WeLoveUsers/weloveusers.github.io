@@ -374,6 +374,9 @@ h3 {
     .row-wrapper-inner {
       width: 750px;
     }
+    .navigation {
+      margin-left: 40px;
+    }
     .accueil h2 {
         font-size: 28px;
         line-height: 42px;
