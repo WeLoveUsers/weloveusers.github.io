@@ -103,6 +103,11 @@ h3 {
   color: #636363;
   border-bottom-color: #e1eb8e;
 }
+#header .lang-nav {
+  font-size: 14px;
+  margin-left: 0;
+  float: right;
+}
 #header .mobile-phone-link {
   display: none;
 }
