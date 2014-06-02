@@ -374,7 +374,7 @@ h3 {
     .row-wrapper-inner {
       width: 750px;
     }
-    .navigation {
+    #header .navigation {
       margin-left: 40px;
     }
     .accueil h2 {
