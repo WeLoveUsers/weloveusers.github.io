@@ -498,19 +498,8 @@ h3 {
     #header .navigation {
       float: none;
       margin: 0;
-      font-size: 12px;
+      font-size: 14px;
       padding-bottom: 5px;
-    }
-    #header .lang-nav {
-      font-size: 10px;
-      float: none;
-      display: block;
-      position: absolute;
-      top: 36px;
-      right: 0px;
-    }
-    #header .lang-nav .nav > li > a {
-      font-size: 12px;
     }
     #header .navigation .nav > li + li,
     #header .lang-nav .nav > li + li {
@@ -518,6 +507,17 @@ h3 {
     }
     #header .navigation .nav > li > a {
       font-size: 14px;
+    }
+    #header .lang-nav {
+      font-size: 11px;
+      float: none;
+      display: block;
+      position: absolute;
+      top: 26px;
+      right: 0px;
+    }
+    #header .lang-nav .nav > li > a {
+      font-size: 11px;
     }
     #header .row-wrapper-inner {
       position: relative;
