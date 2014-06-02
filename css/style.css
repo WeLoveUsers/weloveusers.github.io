@@ -498,10 +498,19 @@ h3 {
     #header .navigation {
       float: none;
       margin: 0;
-      font-size: 16px;
+      font-size: 12px;
       padding-bottom: 5px;
     }
-    #header .navigation .nav > li + li {
+    #header .lang-nav {
+      font-size: 10px;
+      margin-left: 0;
+      float: right;
+    }
+    #header .lang-nav .nav > li > a {
+      font-size: 12px;
+    }
+    #header .navigation .nav > li + li,
+    #header .lang-nav .nav > li + li {
       margin-left: 10px;
     }
     #header .navigation .nav > li > a {
