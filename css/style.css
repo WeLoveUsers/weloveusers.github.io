@@ -513,8 +513,8 @@ h3 {
       float: none;
       display: block;
       position: absolute;
-      top: 26px;
-      right: 0px;
+      top: 0;
+      right: 0;
     }
     #header .lang-nav .nav > li > a {
       font-size: 11px;
