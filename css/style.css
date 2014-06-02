@@ -10,6 +10,7 @@ html, body {
   font-weight: normal;
 }
 .navigation,
+.lang-nav,
 h2, .accueil h2, h3,
 .row-wrapper-inner .titre-section,
 .contact .vcard .role,
