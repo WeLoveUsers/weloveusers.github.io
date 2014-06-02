@@ -377,6 +377,10 @@ h3 {
     #header .navigation {
       margin-left: 40px;
     }
+    #header .navigation .nav > li + li,
+    #header .lang-nav .nav > li + li {
+      margin-left: 15px;
+    }
     .accueil h2 {
         font-size: 28px;
         line-height: 42px;
