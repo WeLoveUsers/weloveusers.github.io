@@ -521,11 +521,20 @@
   position:fixed;
   left:0px;
   top:414px;
+  width:320px;
+  height:46px;
+  overflow:hidden;
 }
 #u41_state0 {
-  position:relative;
+  position:absolute;
   left:0px;
   top:0px;
+  width:320px;
+  height:46px;
+  -ms-overflow-x:hidden;
+  overflow-x:hidden;
+  -ms-overflow-y:hidden;
+  overflow-y:hidden;
   background-image:none;
 }
 #u41_state0_content {
