@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:0px;
+  width:320px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -501,7 +501,6 @@
   width:320px;
   height:134px;
   overflow:hidden;
-  visibility:hidden;
 }
 #u40_state0 {
   position:absolute;
