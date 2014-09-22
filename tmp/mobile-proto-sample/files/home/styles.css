@@ -88,6 +88,7 @@
   top:8px;
   width:32px;
   height:32px;
+  font-size:11px;
 }
 #u5_img {
   position:absolute;
@@ -99,7 +100,7 @@
 #u6 {
   position:absolute;
   left:2px;
-  top:8px;
+  top:10px;
   width:28px;
   word-wrap:break-word;
 }
