@@ -1,14 +1,12 @@
 ﻿$axure.loadCurrentPage({
   "url":"page_3.html",
-  "generationDate":new Date(1411404920332.35),
+  "generationDate":new Date(1411405174704.75),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
     "packageId":"bf8b716f2d0f412c8cbb877e3351420d",
     "type":"Axure:Page",
     "name":"Page 3",
-    "notes":{
-},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",

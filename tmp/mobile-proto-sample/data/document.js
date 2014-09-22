@@ -1,8 +1,8 @@
 ﻿$axure.loadDocument({
   "configuration":{
-    "showPageNotes":true,
+    "showPageNotes":false,
     "showPageNoteNames":false,
-    "showAnnotations":true,
+    "showAnnotations":false,
     "linkStyle":"b",
     "linkFlowsToPages":true,
     "linkFlowsToPagesNewWindow":true,

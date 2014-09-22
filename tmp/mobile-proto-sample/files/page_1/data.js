@@ -1,14 +1,12 @@
 ﻿$axure.loadCurrentPage({
   "url":"page_1.html",
-  "generationDate":new Date(1411404920294.24),
+  "generationDate":new Date(1411405174659.22),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
     "packageId":"79a48da1c8c74e8daee3be880894a13a",
     "type":"Axure:Page",
     "name":"Page 1",
-    "notes":{
-},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",
@@ -164,8 +162,6 @@
       "packageId":"2bc49734caa240aa894e664f65dd9470",
       "type":"Axure:Master",
       "name":"Layout",
-      "notes":{
-},
       "style":{
         "baseStyle":"627587b6038d43cca051c114ac41ad32",
         "pageAlignment":"near",
