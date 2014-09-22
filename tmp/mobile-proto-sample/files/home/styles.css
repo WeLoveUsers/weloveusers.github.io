@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:320px;
+  width:0px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -168,7 +168,7 @@
   word-wrap:break-word;
 }
 #u13 {
-  position:absolute;
+  position:fixed;
   left:0px;
   top:46px;
   width:320px;
