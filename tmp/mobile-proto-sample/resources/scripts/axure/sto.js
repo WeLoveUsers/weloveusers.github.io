@@ -125,11 +125,13 @@ $axure.internal(function($ax) {
     _stoHandlers.fCall = function(sto, scope, eventInfo) {
         //TODO: [mas] handle required type
         var thisObj = _evaluateSTO(sto.thisSTO, scope, eventInfo);
+        if(sto.thisSTO.desiredType == 'string' && sto.thisSTO.computedType != 'string') thisObj = thisObj.toString();
+        
         var args = [];
         for(var i = 0; i < sto.arguments.length; i++) {
             args[i] = _evaluateSTO(sto.arguments[i], scope, eventInfo);
         }
-        var fn = funcs[sto.func] || thisObj[sto.func];
+        var fn = (funcs.hasOwnProperty(sto.func) && funcs[sto.func]) || thisObj[sto.func];
         return fn.apply(thisObj, args);
     };
 
@@ -144,7 +146,9 @@ $axure.internal(function($ax) {
     _binOps['+'] = function(left, right) {
         if(left instanceof Date) return addDayToDate(left, right);
         if(right instanceof Date) return addDayToDate(right, left);
-        return Number(left) + Number(right);
+
+        var num = Number(left) + Number(right);
+        return isNaN(num) ? (String(left) + String(right)) : num;
     };
     _binOps['-'] = function(left, right) {
         if(left instanceof Date) return addDayToDate(left, -right);
@@ -200,7 +204,7 @@ $axure.internal(function($ax) {
     var castSto = function(val, sto) {
         var type = sto.computedType || sto.desiredType;
         if(type == 'string') val = String(val);
-        else if(type == 'date') val = new Date(val);
+        else if(type == 'date' && !(val instanceof Date)) val = new Date(val);
         else if(type == 'int' || type == 'float') val = Number(val);
         else if(type == 'bool') val = Boolean(val);
 

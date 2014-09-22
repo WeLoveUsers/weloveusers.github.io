@@ -221,6 +221,7 @@
             $ax.dynamicPanelManager.updatePanelContentPercentWidth(id);
             $ax.action.fireAnimationFromQueue(id);
             $ax.event.raiseSyntheticEvent(id, "onPanelStateChange");
+            $ax.event.leavingState(oldStateId);
         };
         // Must do state out first, so if we cull by new state, location is correct
         _setVisibility(id, oldStateId, {
