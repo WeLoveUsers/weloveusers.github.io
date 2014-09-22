@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"home.html",
-  "generationDate":new Date(1411405174616.17),
+  "generationDate":new Date(1411405389441.87),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -50,7 +50,7 @@
               "y":46},
             "size":{
               "width":320,
-              "height":268}},
+              "height":368}},
           "adaptiveStyles":{
 },
           "scrollbars":"verticalAsNeeded",
@@ -328,8 +328,8 @@
             "visible":true,
             "style":{
               "size":{
-                "width":10,
-                "height":10}},
+                "width":320,
+                "height":460}},
             "adaptiveStyles":{
 },
             "fixedHorizontal":"left",
@@ -338,7 +338,7 @@
             "fixedMarginVertical":0,
             "fixedKeepInFront":true,
             "scrollbars":"none",
-            "fitToContent":true,
+            "fitToContent":false,
             "propagate":false,
             "diagrams":[{
                 "id":"62ccdee4b9ba43379c2cf011cc4bf66a",
@@ -394,7 +394,7 @@
                         "color":0xFFCCCCCC},
                       "location":{
                         "x":0,
-                        "y":314},
+                        "y":414},
                       "size":{
                         "width":320,
                         "height":46},
@@ -415,7 +415,7 @@
                             "color":0xFFCCCCCC},
                           "location":{
                             "x":0,
-                            "y":314},
+                            "y":414},
                           "size":{
                             "width":320,
                             "height":46},
@@ -522,7 +522,7 @@
                     "style":{
                       "location":{
                         "x":8,
-                        "y":321},
+                        "y":421},
                       "size":{
                         "width":302,
                         "height":32},
@@ -540,7 +540,7 @@
                         "style":{
                           "location":{
                             "x":8,
-                            "y":321},
+                            "y":421},
                           "size":{
                             "width":302,
                             "height":32},

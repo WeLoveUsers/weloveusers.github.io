@@ -16,11 +16,20 @@
   position:fixed;
   left:0px;
   top:0px;
+  width:320px;
+  height:460px;
+  overflow:hidden;
 }
 #u1_state0 {
-  position:relative;
+  position:absolute;
   left:0px;
   top:0px;
+  width:320px;
+  height:460px;
+  -ms-overflow-x:hidden;
+  overflow-x:hidden;
+  -ms-overflow-y:hidden;
+  overflow-y:hidden;
   background-image:none;
 }
 #u1_state0_content {
@@ -55,7 +64,7 @@
 #u4 {
   position:absolute;
   left:0px;
-  top:314px;
+  top:414px;
   width:320px;
   height:46px;
 }
@@ -141,7 +150,7 @@
 #u11 {
   position:absolute;
   left:8px;
-  top:321px;
+  top:421px;
   width:302px;
   height:32px;
 }
@@ -164,7 +173,7 @@
   left:0px;
   top:46px;
   width:320px;
-  height:268px;
+  height:368px;
   overflow:hidden;
 }
 #u13_state0 {
@@ -172,7 +181,7 @@
   left:0px;
   top:0px;
   width:320px;
-  height:268px;
+  height:368px;
   overflow:auto;
   -webkit-overflow-scrolling:touch;
   -ms-overflow-x:hidden;
