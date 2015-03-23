@@ -42,6 +42,24 @@ var App = {
     this._enableScrollspy();
   },
 
+  trackDownloads: function() {
+    $('#pdf-download-btn').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'full-pdf', 1);
+    });
+    $('#source-download-btn').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'full-sources', 1);
+    });
+    $('#pdf-template-1-download-btn').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'template-1-pdf', 1);
+    });
+    $('#pdf-template-2-download-btn').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'template-2-pdf', 1);
+    });
+    $('#pdf-template-3-download-btn').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'template-3-pdf', 1);
+    });
+  },
+
   _enablePopovers: function() {
     var app = this;
     // Find items and bind behaviour
