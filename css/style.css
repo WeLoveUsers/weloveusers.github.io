@@ -1068,6 +1068,9 @@ h3 {
     .contenu-article table.illustration-about-face ul {
       padding-left: 16px;
     }
+    .contenu-article table.illustration-about-face th {
+      line-height: 16px;
+    }
     .contenu-article table.aller-plus-loin img.auto-resize {
       max-width:179px;
       width: auto;
@@ -1166,5 +1169,69 @@ h3 {
     }
     #header .lang-nav .nav > li.active {
       display: none;
+    }
+    .titre-article {
+      height: 240px;
+      position: static;
+    }
+    .titre-article h2 {
+      font-size:26px;
+      line-height: 38px;
+    }
+    .titre-article .licence-labels {
+      display: none;
+    }
+    .contenu-article {
+      line-height: 19px;
+    }
+    .contenu-article h3 {
+      font-size:26px;
+    }
+    .contenu-article .processus {
+      height:184px;
+    }
+    .contenu-article .processus .titre-etape {
+      font-size: 14px;
+      line-height: 182px; 
+    }
+    .contenu-article .processus ul.detail-etape {
+      padding-left: 24px;
+      font-size: 11px;
+      line-height: 16px;
+    }
+    .contenu-article img.fleche-etape {
+      margin-left: 35px;
+    }
+    .contenu-article figure img.auto-resize {
+      max-width:290px;
+      width: auto;
+      height: auto;
+    }
+    .contenu-article figure.clearfix img.pull-left {
+      float: none !important;
+      max-width:290px;
+      width: auto;
+      height: auto;
+    }
+    .contenu-article .well.well-lg {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .contenu-article table.illustration-about-face img.auto-resize {
+      max-width:95px;
+      width: auto;
+      height: auto;
+    }
+    .contenu-article table.illustration-about-face {
+      font-size:11px;
+      line-height: 16px;
+    }
+    .contenu-article table.illustration-about-face th {
+      line-height: 16px;
+    }
+    .contenu-article table.aller-plus-loin img.auto-resize {
+      max-width:144px;
+      width: auto;
+      height: auto;
     }
 }
