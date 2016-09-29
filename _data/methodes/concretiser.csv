@@ -1,0 +1,5 @@
+titre,type,duree,description,url,icone
+Maquettes,Concrétiser,~4 à 7 jours,"Les maquettes sont des versions incomplètes du produit et sont élaborées pour concrétiser les idées et les évaluer avec des utilisateurs et l’équipe projet.",maquettes.html,wlu-maquette
+Test utilisateurs,Evaluer,~4 à 7 jours,"Le test utilisateur (ou d’utilisabilité) est une méthode d’évaluation d’un produit où des participants sont invités à utiliser le produit en suivant des scénarios afin de réaliser des tâches.",test-utilisateurs.html,wlu-test-utilisateur
+Audit ergonomique,Evaluer,~3 à 5 jours,"Lors d’un audit ergonomique, des experts en utilisabilité examinent un produit (logiciel, site web) pour voir s’il respecte des règles établies.",audit-ergonomique.html,wlu-audit-ergonomique
+Mesure quantitative de l'expérience utilisateur,Evaluer,~3 à 5 jours,"La mesure de l’expérience utilisateur (émotions, utilité, utilisabilité, acceptabilité, etc.) consiste à quantifier ce que l’utilisateur vit (d’un point de vue subjectif, comportemental ou physiologique).",mesure-quantitative-experience-utilisateur.html,wlu-mesure-quantitative

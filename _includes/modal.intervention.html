@@ -1,0 +1,50 @@
+<div class="ui small modal" id="popup-intervention">
+  <i class="close icon"></i>
+  <div class="header">Demander une intervention</div>
+  <div class="content">
+    <input type="hidden" name="page" id="page" value="{{ page.title }}">
+    <form class="ui small form" action="https://formspree.io/f.jaouali@weloveusers.com" method="POST">
+
+      <div class="field">
+        <div class="ui left icon input">
+          <input id="nom-prenom" name="nom-prenom" type="text" placeholder="Nom, prénom et fonction">
+          <i class="user icon"></i>
+        </div>
+      </div>
+
+      <div class="fields">
+        <div class="eight wide field">
+          <div class="ui left icon input">
+            <input id="email" name="email" type="email" placeholder="Adresse e-mail">
+            <i class="mail icon"></i>
+          </div>
+        </div>
+
+        <div class="eight wide field">
+          <div class="ui left icon input">
+            <input id="telephone" name="telephone" type="tel" placeholder="Numéro de téléphone">
+            <i class="call icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="demande">A qui se destine l'intervention ? Quels seraient les thèmes abordés ?</label>
+        <div class="ui input"><textarea id="demande" name="demande" rows="6"></textarea></div>
+      </div>
+
+    </form>
+
+    <div class="ui success hidden message">
+      <p>Votre message a bien été envoyé.</p>
+      <div class="ui green close button" tabindex="0">Fermer</div>
+    </div>
+  
+  </div>
+
+  <div class="actions">
+    <div class="lien-contact">Vous pouvez également trouver nos coordonnées sur la page <a href="{{ site.baseurl }}/contact/index.html">contact</a></div>
+    <div class="ui green submit button" tabindex="0">Envoyer</div>
+  </div>
+
+</div>

@@ -1,0 +1,44 @@
+{% if jekyll.environment == "production" %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="{{ "/modules/semantic/semantic.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/modules/wlu/wlu.min.js" | prepend: site.baseurl }}"></script>
+<script>
+  // Google Analytics
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-754802-8', 'weloveusers.com');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+<!-- Begin Inspectlet Embed Code -->
+<script type="text/javascript" id="inspectletjs">
+window.__insp = window.__insp || [];
+__insp.push(['wid', 1362874540]);
+(function() {
+function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+})();
+</script>
+<!-- End Inspectlet Embed Code -->
+
+{% else %}
+
+<script src="{{ "/modules/wlu/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/modules/semantic/semantic.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/modules/wlu/wlu.js" | prepend: site.baseurl }}"></script>
+
+{% endif %}
+
+<script type="text/javascript">     
+  App.run();   
+  {% if jekyll.environment == "production" %}
+  App.trackDownloads();
+  {% endif %} 
+</script>

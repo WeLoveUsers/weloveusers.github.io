@@ -1,0 +1,108 @@
+---
+layout: default
+title: Personas
+section: research
+subsection: comprendre-interpreter-modeliser
+breadcrumb: true
+excerpt: Un persona consiste à modéliser un groupe de personnes dont les comportements, motivations et buts sont proches.
+---
+
+{% assign methode = site.data.methodes.recherche[6] %}
+
+<header class="page-header method-header">
+  <h1 class="ui header center aligned">{{ page.title }}</h1>
+  <div class="method-type"><span class="type">{{ methode.type }}</span></div>
+</header>
+
+<div class="section method-description">
+  <div class="ui stackable grid container">
+    <div class="sixteen wide column nopad">
+      <img src="/images/recherche/comprendre-bandeau.jpg" srcset="/images/recherche/comprendre-bandeau.jpg, /images/recherche/comprendre-bandeau@2x.jpg 2x" alt="Comprendre">
+      <div class="logo"><div class="relative">{% include love.huge.html %}<i class="icon wlu-icon {{ methode.icone }}"></i></div></div>
+    </div>
+    <div class="one wide column"></div>
+    <div class="six wide column">
+      <div class="text">
+        <p>Un persona est un moyen pour modéliser un groupe de personnes dont les comportements, motivations et buts sont proches.</p>
+        <p>Ils permettent à l’équipe de conception de rester centrée sur les utilisateurs finaux, leurs aptitudes et leurs buts afin de déterminer ce que le produit ou service doit faire et comment il devrait fonctionner.</p>
+      </div>
+    </div>
+    <div class="two wide column"></div>
+    <div class="five wide column">
+      <div class="text">
+        <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span><a class="popup" data-html="Cette estimation inclut le temps pour réaliser des <a href='/recherche/entretien-recherche.html'>entretiens de recherche</a>.<br /><br /><i>Note : le recrutement des participants n'est pas inclut dans l'estimation.</i>" data-variation="wide inverted">{{ methode.duree }}</a></div>
+        <p>
+          <button class="ui wlu button" id="bt-devis">Demander un devis</button>
+          {% include button.contact.html %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui two column grid illustrations container">
+  <div class="column nopad">
+    <figure class="thumbnails">
+      <img src="/images/recherche/illustrations/exemple-personas.jpg"  srcset="/images/recherche/illustrations/exemple-personas.jpg, /images/recherche/illustrations/exemple-personas@2x.jpg 2x" alt="Exemple de fiches persona" data-action="zoom">
+      <figcaption>Figure 1 - Exemple de fiches persona</figcaption>
+    </figure>
+  </div>
+  <div class="column nopad">
+    <figure class="thumbnails">
+      <img src="/images/recherche/illustrations/modele-proto-personas.jpg"  srcset="/images/recherche/illustrations/modele-proto-personas.jpg, /images/recherche/illustrations/modele-proto-personas@2x.jpg 2x" alt="Modèle pour la construction de proto-personas" data-action="zoom">
+      <figcaption>Figure 2 - Modèle pour la construction de proto-personas</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="methodology-header">
+  <h2 class="ui header">Notre méthodologie</h2>
+  <p class="sub header">Les 5 étapes pour réaliser des personas :</p>
+</div>
+
+<div class="ui stackable grid container">
+  <div class="nine wide column">
+    <div class="five methodology-steps">
+      <div class="step">
+        <i class="counter">1</i>
+        <div class="content">
+          <div class="title">Collecter des données sur le utilisateurs.</div>
+          <div class="description">(<a href="/recherche/observation-terrain.html">observation de terrain</a>, <a href="/recherche/entretien-recherche.html">entretien de recherche</a>, <a href="/recherche/questionnaire.html">questionnaire</a>, <a href="/recherche/focus-group.html">focus group</a>, données d’usage, etc.)</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">2</i>
+        <div class="content">
+          <div class="title">Identifier des variables comportementales.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">3</i>
+        <div class="content">
+          <div class="title">Déterminer les groupes de personnes dont les comportements sont proches.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">4</i>
+        <div class="content">
+          <div class="title">Rédiger les fiches persona.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">5</i>
+        <div class="content">
+          <div class="title">Présenter les personas à l’équipe de conception.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="seven wide nopad column">
+    <div class="plus-loin">
+      <h2>Pour aller plus loin</h2>
+      <p><i class="chevron right icon"></i><a href="/formation/apprendre/personas.html">Apprendre à construire des personas</a>
+      <p><i class="chevron right icon"></i><a href="/formation/formation-ux-design.html">Formation User Experience Design</a>
+    </div>
+  </div>
+</div>
+
+{% include modal.devis.html %}

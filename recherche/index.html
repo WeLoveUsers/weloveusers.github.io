@@ -1,0 +1,105 @@
+---
+layout: default
+title: We Love Research
+subtitle: Comprendre les hommes et leurs besoins
+section: research
+breadcrumb: true
+navinterne: true
+excerpt: Comprendre les hommes et leurs besoins - Pour créer des outils, des produits et des services innovants adaptés aux usages des hommes, il faut avant tout appréhender leur environnement et étudier leur écosystème, décrypter leurs attentes explicites ou inconscientes, questionner leurs habitudes et leurs histoires.
+---
+
+<header class="page-header relative">
+  <h1 class="ui header center aligned spy" id="haut-page">
+    <span class="first">We</span>
+    <span class="love"><span class="hidden">Love</span><img src="/images/love/research.png" srcset="/images/love/research.png, /images/love/research@2x.png 2x" alt="Love"></span>
+    <span class="second">Research</span>
+    <div class="sub header">{{ page.subtitle }}</div>
+  </h1>
+
+  <div class="ui stackable grid container">
+    <div class="two wide column"></div>
+    <div class="six wide column">
+      <p>Pour créer des outils, des produits et des services innovants adaptés aux usages des hommes, il faut avant tout appréhender leur environnement et étudier leur écosystème, décrypter leurs attentes explicites ou inconscientes, questionner leurs habitudes et leurs histoires.</p>
+    </div>
+    <div class="six wide column">
+      <p>Cette analyse terrain fine est le prérequis nécessaire pour élaborer une compréhension et une connaissance profonde des hommes, étape nécessaire pour répondre au plus juste et concevoir avec précision ce qui apportera une amélioration de leur quotidien.</p>
+    </div>
+    <div class="sixteen wide center aligned column"><button class="ui wlu button" id="bt-devis">Demander un devis</button></div>
+  </div>
+</header>
+
+<section class="section section-1">
+  <h2 class="ui header spy" id="comprendre-interpreter-modeliser">Comprendre, interpréter et modéliser</h2>
+
+  <div class="ui stackable grid container relative">
+    <div class="logo"><div class="relative">{% include love.big.html %}<i class="icon wlu-icon wlu-comprendre"></i></div></div>
+    <div class="eight wide column nopad">
+      <img class="image-header" src="/images/recherche/comprendre.jpg" srcset="/images/recherche/comprendre.jpg, /images/recherche/comprendre@2x.jpg 2x" alt="Comprendre, interpréter et modéliser">
+    </div>
+    <div class="two wide column"></div>
+    <div class="five wide middle aligned column">
+      <p>Nos enquêtes de terrain s’appuient sur des méthodes de sciences humaines et sociales. L’objectif est d’observer et de participer pour comprendre ce que les usagers font et, dans la mesure du possible, pourquoi.</p>
+    </div>
+    <div class="one wide column"></div>
+  </div>
+
+  <div class="ui header methodes">Nos méthodes</div>
+
+  <div class="ui link grid nomargin container">
+    {% for methode in site.data.methodes.recherche %}
+    <a class="row" href="{{ site.baseurl }}/recherche/{{ methode.url }}">
+      <div class="four wide right aligned method-icon column">
+        <i class="icon wlu-icon {{ methode.icone }}"></i>
+      </div>
+      <div class="eight wide method-content column">
+        <div class="header">{{ methode.titre }}</div>
+        <div class="type">{{ methode.type }}</div>
+        <div class="description"><p>{{ methode.description }}</p></div>
+      </div>
+      <div class="four wide method-workload column">
+        <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span>{{ methode.duree }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+</section>
+
+<section class="section section-2">
+  <h2 class="ui header spy" id="concretiser-evaluer">Concretiser et évaluer</h2>
+
+  <div class="ui stackable grid container relative">
+    <div class="logo"><div class="relative">{% include love.big.html %}<i class="icon wlu-icon wlu-questionnaire"></i></div></div>
+    <div class="one wide column"></div>
+    <div class="five wide middle aligned column">
+      <p>Tenant compte des résultats de nos recherches, nous réalisons des maquettes et les testons avec des utilisateurs réels. Au fil des itérations, nos prototypes s’affinent et les interactions s’enrichissent.</p>
+    </div>
+    <div class="two wide column"></div>
+    <div class="eight wide column nopad">
+      <img class="image-header" src="/images/recherche/concretiser.jpg" srcset="/images/recherche/concretiser.jpg, /images/recherche/concretiser@2x.jpg 2x" alt="Concretiser et évaluer">
+    </div>
+  </div>
+
+  <div class="ui header methodes">Nos méthodes</div>
+
+  <div class="ui link grid nomargin container">
+    {% for methode in site.data.methodes.concretiser %}
+    <a class="row" href="{{ site.baseurl }}/recherche/{{ methode.url }}">
+      <div class="four wide right aligned method-icon column">
+        <i class="icon wlu-icon {{ methode.icone }}"></i>
+      </div>
+      <div class="eight wide method-content column">
+        <div class="header">{{ methode.titre }}</div>
+        <div class="type">{{ methode.type }}</div>
+        <div class="description"><p>{{ methode.description }}</p></div>
+      </div>
+      <div class="four wide method-workload column">
+        <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span>{{ methode.duree }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+</section>
+
+{% include modal.devis.html %}

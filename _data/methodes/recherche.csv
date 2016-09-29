@@ -1,0 +1,10 @@
+titre,type,duree,description,url,icone
+Observation de terrain,Comprendre & interpréter,~7 à 10 jours,"L’observation est une méthode de recherche qualitative inspirée de l’ethnographie.",observation-terrain.html,wlu-observation
+Entretien de recherche,Comprendre & interpréter,~6 à 9 jours,"L’entretien est une méthode de recherche qualitative qui consiste à s'entretenir avec des personnes et comprendre leurs opinions.",entretien-recherche.html,wlu-entretien
+Auto-confrontation vidéo,Comprendre & interpréter,~8 à 12 jours,"L’auto-confrontation est une méthode de recherche qualitative qui consiste à filmer l’activité des personnes puis à réaliser un entretien avec eux.",auto-confrontation-video.html,wlu-auto-confrontation
+Questionnaire,Comprendre & interpréter,~4 à 6 jours,"Le questionnaire est une méthode de recherche qui consiste à collecter les réponses des utilisateurs à un ensemble de questions afin de valider des hypothèses issues d’entretiens ou d’observations.",questionnaire.html,wlu-questionnaire
+Focus group,Comprendre & interpréter,~7 à 10 jours,"Le focus group (ou groupe de discussion) est une méthode de recherche qualitative qui vise à étudier les avis et les opinions de personnes en groupe.",focus-group.html,wlu-focus-group
+Tri de cartes,Comprendre & interpréter,~3 à 5 jours,"Le tri de cartes est une méthode de recherche qui consiste à demander aux utilisateurs de trier des cartes pour structurer et catégoriser les informations présentées sur une interface.",tri-de-cartes.html,wlu-tri-cartes
+Personas,Modéliser,~10 à 15 jours,"Un persona consiste à modéliser un groupe de personnes dont les comportements, motivations et buts sont proches.",personas.html,wlu-persona
+Scénarios,Modéliser,~1 à 3 jours,"Les scénarios visent à modéliser des situations d’usage existantes ou envisagées en décrivant concrètement les interactions entre l’utilisateur et le produit par une histoire.",scenarios.html,wlu-scenario
+Experience maps,Modéliser,~2 à 5 jours,"Les experience maps  sont des représentations graphiques de moments d’interactions entre l’utilisateur et le produit et/ou service.",experience-maps.html,wlu-experience-map

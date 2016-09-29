@@ -1,0 +1,86 @@
+---
+layout: default
+title: Audit ergonomique
+section: research
+subsection: concretiser-evaluer
+breadcrumb: true
+excerpt: Lors d’un audit ergonomique, des experts en utilisabilité examinent un produit (logiciel, site web) pour voir s’il respecte des règles établies.
+---
+
+{% assign methode = site.data.methodes.concretiser[2] %}
+
+<header class="page-header method-header">
+  <h1 class="ui header center aligned">{{ page.title }}</h1>
+  <div class="method-type"><span class="type">{{ methode.type }}</span></div>
+</header>
+
+<div class="section method-description">
+  <div class="ui stackable grid container">
+    <div class="sixteen wide column nopad">
+      <img src="/images/recherche/concretiser-bandeau.jpg" srcset="/images/recherche/concretiser-bandeau.jpg, /images/recherche/concretiser-bandeau@2x.jpg 2x" alt="Concrétiser">
+      <div class="logo"><div class="relative">{% include love.huge.html %}<i class="icon wlu-icon {{ methode.icone }}"></i></div></div>
+    </div>
+    <div class="one wide column"></div>
+    <div class="six wide column">
+      <div class="text">
+        <p>Lors d’un <a class="popup" data-html="Également appelé évaluation heuristique ou évaluation experte." data-variation="wide inverted">audit ergonomique<sup>1</sup></a>, des experts en expérienc utilisateur ou en utilisabilité (par exemple des ergonomes IHM) examinent un produit (logiciel, site web) pour voir s’il respecte des règles établies (heuristiques). Le résultat de cette analyse est une liste de problèmes d’utilisabilité et des recommandations.</p>
+        <p>Cette méthode est particulièrement intéressante car elle est rapide à mettre en œuvre et ne nécessite pas d’utilisateurs.</p>
+      </div>
+    </div>
+    <div class="two wide column"></div>
+    <div class="five wide column">
+      <div class="text">
+        <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span><a class="popup" data-content="L'estimation dépend du périmètre à évaluer." data-variation="wide inverted">{{ methode.duree }}</a></div>
+        <p>
+          <button class="ui wlu button" id="bt-devis">Demander un devis</button>
+          {% include button.contact.html %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="methodology-header">
+  <h2 class="ui header">Notre méthodologie</h2>
+  <p class="sub header">Les 5 étapes d’un audit ergonomique :</p>
+</div>
+
+<div class="ui stackable grid container">
+  <div class="nine wide column">
+    <div class="six green methodology-steps">
+      <div class="step">
+        <i class="counter">1</i>
+        <div class="content">
+          <div class="title">Choisir les heuristiques pertinentes pour le projet.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">2</i>
+        <div class="content">
+          <div class="title">Construire la grille et la stratégie d’évaluation.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">3</i>
+        <div class="content">
+          <div class="title">Réaliser les évaluations.</div>
+          <div class="description">(3 experts différents)</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">4</i>
+        <div class="content">
+          <div class="title">Confronter les résultats des différents experts.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">5</i>
+        <div class="content">
+          <div class="title">Analyser les résultats et émettre des recommandations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include modal.devis.html %}

@@ -1,0 +1,17 @@
+<button class="ui icon big button" id="bt-nav-mobile"><i class="ui content icon"></i></button>
+<nav class="site-nav ui grid">
+    <div class="three wide column">
+        <a href="{{ site.baseurl }}/" class="logo">
+          <img src="/images/logo/we-love-users-logo.gif" srcset="/images/logo/we-love-users-logo.gif, /images/logo/we-love-users-logo@2x.gif 2x" alt="{{ site.title }}">
+        </a>
+    </div>
+    <div class="thirteen wide right aligned column">
+        <a href="{{ site.baseurl }}/" class="item {% if page.section == "home" %}active{% endif %}">Accueil</a>
+        <a href="{{ site.baseurl }}/design-ux/index.html" class="item {% if page.section == "users-love-design" %}active{% endif %}"><span class="first">Users {% include love.html %}</span>Design & UX</a>
+        <a href="{{ site.baseurl }}/recherche/index.html" class="item {% if page.section == "research" %}active{% endif %}"><span class="first">We {% include love.html %}</span>Research</a>
+        <a href="{{ site.baseurl }}/formation/index.html" class="item {% if page.section == "teaching" %}active{% endif %}"><span class="first">We {% include love.html %}</span>Teaching</a>
+        <a href="{{ site.baseurl }}/partage/index.html" class="item {% if page.section == "sharing" %}active{% endif %}"><span class="first">We {% include love.html %}</span>Sharing</a>
+        <a href="{{ site.baseurl }}/clients/index.html" class="item {% if page.section == "clients" %}active{% endif %}"><span class="first">We {% include love.html %}</span>Clients</a>
+        <a href="{{ site.baseurl }}/contact/index.html" class="item {% if page.section == "contact" %}active{% endif %}">Contact</a>
+    </div>
+</nav>

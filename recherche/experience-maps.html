@@ -1,0 +1,44 @@
+---
+layout: default
+title: Experience Maps
+section: research
+subsection: comprendre-interpreter-modeliser
+breadcrumb: true
+excerpt: Les experience maps  sont des représentations graphiques de moments d’interactions entre l’utilisateur et le produit et/ou service.
+---
+
+{% assign methode = site.data.methodes.recherche[8] %}
+
+<header class="page-header method-header">
+  <h1 class="ui header center aligned">{{ page.title }}</h1>
+  <div class="method-type"><span class="type">{{ methode.type }}</span></div>
+</header>
+
+<div class="section method-description">
+  <div class="ui stackable grid container">
+    <div class="sixteen wide column nopad">
+      <img src="/images/recherche/comprendre-bandeau.jpg" srcset="/images/recherche/comprendre-bandeau.jpg, /images/recherche/comprendre-bandeau@2x.jpg 2x" alt="Comprendre">
+      <div class="logo"><div class="relative">{% include love.huge.html %}<i class="icon wlu-icon {{ methode.icone }}"></i></div></div>
+    </div>
+    <div class="one wide column"></div>
+    <div class="six wide column">
+      <div class="text">
+        <p>Les <a class="popup" data-content="Parfois appelées user journey ou customer journey" data-variation="wide inverted">experience maps<sup>1</sup></a> sont des représentations graphiques des interactions entre un type d’utilisateur (persona) et le produit ou service au fil du temps.</p>
+        <p>Elles se présentent généralement sous forme de <a class="popup" data-content="Comme le moment de découverte du service ou la première utilisation par exemple" data-variation="wide inverted">moments d’interactions<sup>2</sup></a> pour lesquels sont détaillés les actions que l’utilisateur réalise, ses pensées pendant l’interaction et les émotions associées à ces interactions.</p>
+        <p>Comme pour toutes les méthodes de modélisation, elles permettent de représenter l’existant pour identifier des opportunités ou se projet dans le futur tel qu’envisagé.</p>
+      </div>
+    </div>
+    <div class="two wide column"></div>
+    <div class="five wide column">
+      <div class="text">
+        <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span><a class="popup" data-html="Estimation pour la réalisation d'une experience map.<br /><br /><i>Note : la phase de recherche utilisateur nécessaire pour comprendre les usages n'est pas inclue dans l'estimation.</i>" data-variation="wide inverted">{{ methode.duree }}</a></div>
+        <p>
+          <button class="ui wlu button" id="bt-devis">Demander un devis</button>
+          {% include button.contact.html %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include modal.devis.html %}

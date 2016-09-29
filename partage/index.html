@@ -1,0 +1,54 @@
+---
+layout: default
+title: We Love Sharing
+subtitle: Partager une vision
+section: sharing
+breadcrumb: true
+excerpt: Partager une vision - Plus nous recherchons, questionnons et observons le monde, plus nous aimons le design et l’UX. De cette cuillère qui a été si bien pensée jusqu’à cette chaise à laquelle personne ne pense...
+---
+
+<header class="page-header relative">
+  <h1 class="ui header center aligned">
+    <span class="first">We</span>
+    <span class="love"><span class="hidden">Love</span><img src="/images/love/sharing.png" srcset="/images/love/sharing.png, /images/love/sharing@2x.png 2x" alt="Love"></span>
+    <span class="second">Sharing</span>
+    <div class="sub header">{{ page.subtitle }}</div>
+  </h1>
+
+  <div class="ui stackable grid container">
+    <div class="two wide column"></div>
+    <div class="six wide column">
+      <p>Plus nous recherchons, questionnons et observons le monde, plus nous aimons le design et l’UX. De cette cuillère qui a été si bien pensée jusqu’à cette chaise à laquelle personne ne pense...</p>
+    </div>
+    <div class="six wide column">
+      <p>...mais qui induit naturellement notre assise en passant par ce panneau de signalisation ou cette affiche dans le métro ouvrez l’oeil : le design et l’UX sont partout !</p>
+    </div>
+    <div class="two wide large screen only column"></div>
+    <div class="sixteen wide center aligned column"><a class="ui wlu button" href="https://www.linkedin.com/company/weloveusers/" target="_blank">Suivre sur LinkedIn <i class="icon linkedin square"></i></a></div>
+  </div>
+</header>
+
+<section class="section section-1" id="derniere-publication">
+  <h2 class="ui header">Micro-publications</h2>
+
+  <div class="ui two stackable cards">
+  {% for micropublication in site.data.partages.micropublications %}
+    <div class="fluid card">
+      <div class="image">
+        <img src="{{ micropublication.image }}" data-action="zoom">
+      </div>
+      <div class="content nopad">
+        <div class="header">{{ micropublication.titre }}</div>
+        <div class="meta">
+          <span class="right floated action"><a class="ui icon small button" href="{{ micropublication.url }}" target="_blank">Réagir <i class="icon linkedin square"></i></a></span>
+          <span class="date">{{ micropublication.date }}</span>
+          
+        </div>
+        <div class="description">
+          {{ micropublication.description }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</section>

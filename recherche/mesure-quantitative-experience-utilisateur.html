@@ -1,0 +1,87 @@
+---
+layout: default
+title: Mesure quantitative de l'expérience utilisateur
+section: research
+subsection: concretiser-evaluer
+breadcrumb: true
+excerpt: La mesure de l’expérience utilisateur (émotions, utilité, utilisabilité, acceptabilité, etc.) consiste à quantifier ce que l’utilisateur vit (d’un point de vue subjectif, comportemental ou physiologique).
+---
+
+{% assign methode = site.data.methodes.concretiser[3] %}
+
+<header class="page-header method-header">
+  <h1 class="ui header center aligned">{{ page.title }}</h1>
+  <div class="method-type"><span class="type">{{ methode.type }}</span></div>
+</header>
+
+<div class="section method-description">
+  <div class="ui stackable grid container">
+    <div class="sixteen wide column nopad">
+      <img src="/images/recherche/concretiser-bandeau.jpg" srcset="/images/recherche/concretiser-bandeau.jpg, /images/recherche/concretiser-bandeau@2x.jpg 2x" alt="Concrétiser">
+      <div class="logo"><div class="relative">{% include love.huge.html %}<i class="icon wlu-icon {{ methode.icone }}"></i></div></div>
+    </div>
+    <div class="one wide column"></div>
+    <div class="six wide column">
+      <div class="text">
+        <p>L’expérience utilisateur (UX) peut-être étudiée sous <a class="popup" data-html="Émotions, utilité, utilisabilité, acceptabilité, etc." data-variation="wide inverted">différentes dimensions<sup>1</sup></a> et à différents moments (avant l’utilisation, pendant et après).</p>
+        <p>Selon le produit évalué, les dimensions de l’UX étudiées et les moments d’interaction, différentes méthodes peuvent-être utilisées pour quantifier ce que <a class="popup" data-html="D’un point de vue subjectif, comportemental ou physiologique" data-variation="wide inverted">l’utilisateur vit<sup>2</sup></a>.</p>
+      </div>
+    </div>
+    <div class="two wide column"></div>
+    <div class="five wide column">
+      <div class="text">
+        <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span><a class="popup" data-content="Chaque projet étant différent, les durées peuvent varier." data-variation="wide inverted">{{ methode.duree }}</a></div>
+        <p>
+          <button class="ui wlu button" id="bt-devis">Demander un devis</button>
+          {% include button.contact.html %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="methodology-header">
+  <h2 class="ui header">Notre méthodologie</h2>
+  <p class="sub header">Les 5 étapes d’une mesure quantitative :</p>
+</div>
+
+<div class="ui stackable grid container">
+  <div class="nine wide column">
+    <div class="six green methodology-steps">
+      <div class="step">
+        <i class="counter">1</i>
+        <div class="content">
+          <div class="title">Déterminer les objectif de l’étude.</div>
+          <div class="description">(quelles dimensions mesurer ?)</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">2</i>
+        <div class="content">
+          <div class="title">Choisir les outils de mesure adaptés.</div>
+          <div class="description">(questionnaire, mesure physiologique, etc.)</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">3</i>
+        <div class="content">
+          <div class="title">Choisir la stratégie d’échantillonnage.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">4</i>
+        <div class="content">
+          <div class="title">Réaliser les mesures.</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="counter">5</i>
+        <div class="content">
+          <div class="title">Analyser statistiquement les résultats et les représenter graphiquement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include modal.devis.html %}
