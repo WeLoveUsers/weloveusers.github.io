@@ -4,11 +4,12 @@ title: We Love Sharing
 subtitle: Partager une vision
 section: sharing
 breadcrumb: true
+navinterne: true
 excerpt: Partager une vision - Plus nous recherchons, questionnons et observons le monde, plus nous aimons le design et l’UX. De cette cuillère qui a été si bien pensée jusqu’à cette chaise à laquelle personne ne pense...
 ---
 
 <header class="page-header relative">
-  <h1 class="ui header center aligned">
+  <h1 class="ui header center aligned spy" id="haut-page">
     <span class="first">We</span>
     <span class="love"><span class="hidden">Love</span><img src="/images/love/sharing.png" srcset="/images/love/sharing.png, /images/love/sharing@2x.png 2x" alt="Love"></span>
     <span class="second">Sharing</span>
@@ -29,7 +30,7 @@ excerpt: Partager une vision - Plus nous recherchons, questionnons et observons 
 </header>
 
 <section class="section section-1" id="derniere-publication">
-  <h2 class="ui header">Micro-publications</h2>
+  <h2 class="ui header spy" id="micro-publications">Micro-publications</h2>
 
   <div class="ui two stackable cards">
   {% for micropublication in site.data.partages.micropublications %}
@@ -50,5 +51,23 @@ excerpt: Partager une vision - Plus nous recherchons, questionnons et observons 
       </div>
     </div>
   {% endfor %}
+  </div>
+</section>
+
+<section class="section section-2">
+  <h2 class="ui header spy" id="articles">Articles</h2>
+
+   <div class="ui link grid nomargin container">
+    {% for article in site.data.partages.articles %}
+    <a class="row" href="{{ site.baseurl }}/partage/{{ article.url }}">
+      <div class="four wide nopad method-icon column">
+        <img src="{{ article.logo }}{{ article.filetype }}" srcset="{{ article.logo }}{{ article.filetype }}, {{ article.logo }}@2x{{ article.filetype }} 2x" alt="{{ article.titre }}">
+      </div>
+      <div class="twelve wide method-content column">
+        <div class="header">{{ article.titre }}</div>
+        <div class="description"><p>{{ article.description }}</p></div>
+      </div>
+    </a>
+    {% endfor %}
   </div>
 </section>

@@ -48,7 +48,15 @@
     
 
     {% if page.section == "sharing" %}
+      {% if page.subsection == "articles" %}
+      <a class="section" href="{{ site.baseurl }}/partage/index.html">We {% include love.html %} Sharing</a>
+      <i class="chevron right icon divider"></i>
+      <a class="section" href="{{ site.baseurl }}/partage/index.html#articles">Articles</a>
+      <i class="chevron right icon divider"></i>
+      <div class="active section">{{ page.title }}</div>
+      {% else %}  
       <div class="active section">We {% include love.html %} Sharing</div>
+      {% endif %}
     {% endif %}
 
 
