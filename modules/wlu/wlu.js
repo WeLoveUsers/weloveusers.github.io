@@ -476,17 +476,29 @@ var AppHelpers = {
       width   : originalWidth,
       height  : originalHeight
     };
-
+    // Show a loading indicator
+    var loader = document.createElement('div'),
+        loaderContainer = document.createElement('div')
+    loaderContainer.className = 'ui active inverted dimmer'
+    loaderContainer.style.height = target.org.height + 'px'
+    loaderContainer.style.width = target.org.width + 'px'
+    loader.className = 'ui loader'
+    loaderContainer.appendChild(loader)
+    target.parentNode.appendChild(loaderContainer)
+    
     // Replace image with highest resolution
     var tmpImg = document.createElement('img')
+    
     tmpImg.onload = $.proxy(function () {
       target.removeAttribute('srcset')
       target.src    = tmpImg.src
       target.width  = target.org.width
       target.height = target.org.height
+      target.parentNode.removeChild(loaderContainer)
       this._activeZoom = new Zoom(target)
       this._activeZoom.zoomImage()
     }, this)
+
     tmpImg.src = AppHelpers.getHighestDensityImageSrc(target.org.srcset) || target.org.src
 
     // todo(fat): probably worth throttling this
