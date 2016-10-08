@@ -150,6 +150,8 @@ a.popup {
 .method-description .text a,
 body.article .content .sixteen.wide.column a,
 .plus-loin a,
+.programme-formation a,
+.public-cible a,
 body.sharing .ui.cards>.card>.content>.description a {
   color: inherit;
   text-decoration: underline;
@@ -159,6 +161,8 @@ body.sharing .ui.cards>.card>.content>.description a {
 .method-description .text a:hover,
 body.article .content .sixteen.wide.column a:hover,
 .plus-loin a:hover,
+.programme-formation a:hover,
+.public-cible a:hover,
 body.sharing .ui.cards>.card>.content>.description a:hover {
   color: #111111;
   text-decoration: underline;
@@ -936,6 +940,21 @@ body.clients .section .stackable.grid .light-blue-border .client-logo {
   color: #223f41;
   font-size: 0.86em;
   font-weight: 400;
+}
+.programme-formation,
+.public-cible {
+  margin-top: 1.4em;
+  color: #636363;
+  padding:1.9em;
+}
+.programme-formation {
+  background-color: #dddddd;
+}
+.programme-formation h2,
+.public-cible h2 {
+  color: #636363;
+  line-height: 1.2em;
+  margin-bottom: 1.4em;
 }
 .illustrations figure.thumbnails img {
   width: 100%;
