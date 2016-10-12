@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body class="{{ page.section }} {{ page.subsection }}">
+    
+    <div class="ui top container">
+      <div class="sticky-nav">
+        {% include nav.site.html %}
+
+        {% include breadcrumb.html %}
+      </div>
+    </div>
+    
+    <div class="ui main container">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+    {% include nav.site.mobile.html %}
+    
+    {% include scripts.html %}
+  </body>
+
+</html>
