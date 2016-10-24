@@ -69,5 +69,15 @@ excerpt: Partager une vision - Plus nous recherchons, questionnons et observons 
       </div>
     </a>
     {% endfor %}
+    {% assign article = site.data.formations.articles[0] %}
+    <a class="row" href="{{ site.baseurl }}/formation/{{ article.url }}">
+      <div class="four wide nopad method-icon column">
+        <img src="{{ article.logo }}{{ article.filetype }}" srcset="{{ article.logo }}{{ article.filetype }}, {{ article.logo }}@2x{{ article.filetype }} 2x" alt="{{ article.titre }}">
+      </div>
+      <div class="twelve wide method-content column">
+        <div class="header">{{ article.titre }}</div>
+        <div class="description"><p>{{ article.description }}</p></div>
+      </div>
+    </a>
   </div>
 </section>
