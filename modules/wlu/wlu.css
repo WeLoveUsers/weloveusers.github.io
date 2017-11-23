@@ -42,7 +42,7 @@
 .wlu-intervention-pedagogique:before{content:'\0054';}
 
 
-/* BOF - Zoom */ 
+/* BOF - Zoom */
 img[data-action="zoom"] {
   cursor: pointer;
   cursor: -webkit-zoom-in;
@@ -84,7 +84,7 @@ img.zoom-img {
 .zoom-overlay-transitioning {
   cursor: default;
 }
-/* EOF - Zoom */ 
+/* EOF - Zoom */
 
 
 
@@ -389,7 +389,7 @@ h2.ui.header:first-child {
 }
 .section .stackable.grid .logo .relative .love {
   top:0.4em;
-} 
+}
 .section .stackable.grid .logo .relative .wlu-icon {
   position: absolute;
   width:100%;
@@ -424,11 +424,11 @@ h2.ui.header:first-child {
   margin-bottom: 1em;
 }
 .ui.link.grid .row:hover {
-  
+
 }
 .ui.link.grid .row .description,
 .ui.link.grid .row .workload .title {
-  color:#a4a4a4;  
+  color:#a4a4a4;
 }
 .ui.link.grid .row .header {
   font-family: 'Oswald', sans-serif;
@@ -443,7 +443,7 @@ h2.ui.header:first-child {
   color:#4a4a4a;
   font-size: 0.65em;
   padding:0.15em 0.85em;
-  font-style: italic;  
+  font-style: italic;
   margin-left:1.75em;
   line-height: 1.2em;
   vertical-align: text-top;
@@ -663,10 +663,57 @@ body.sharing .ui.cards>.card>.content>.description {
 
 
 
-body.clients .section-1 img.background {
+body.clients img.background {
   position: absolute;
   left:0;
   top:0;
+}
+body.clients .links {
+  margin:0;
+  padding:0;
+  margin-top: 4em;
+}
+body.clients .links a {
+  background: white;
+  display: inline-block;
+  vertical-align: top;
+  width:555px;
+  text-align: center;
+  color: #ffffff;
+  height:555px;
+  margin-right: 17px;
+}
+body.clients .links a:last-child {
+  margin-right: 0;
+}
+body.clients .links a .text {
+  display: block;
+  position: absolute;
+  width:555px;
+  top:18em;
+}
+body.clients .links a .first {
+  font-size: 1.7em;
+  line-height: 1.2;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  display: block;
+}
+body.clients .links a .second {
+  font-size: 0.9em;
+  line-height: 2;
+  display: block;
+  font-style: italic;
+}
+body.clients .links a .logo,
+body.clients .links a .logo .relative .wlu-icon {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+body.clients .links a .logo {
+  top:10em;
 }
 body.clients .section-1 .stackable.grid {
   background:transparent;
@@ -683,15 +730,10 @@ body.clients .section-1 .stackable.grid .ui.header {
 }
 body.clients .section-1 .stackable.grid .header-row {
   padding-top: 6em;
-  height: 791px;
   color:#FFFFFF;
-}
-body.clients .section-1 .stackable.grid .content-row {
-  
 }
 body.clients .section-1 .stackable.grid .content-row .ui.header.methodes {
   margin-top: 1.2em;
-  color:#0076B5;
 }
 body.clients .section-1 .stackable.grid .content-row .ui.header:not(.methodes) {
   color:#4A4A4A;
@@ -699,32 +741,31 @@ body.clients .section-1 .stackable.grid .content-row .ui.header:not(.methodes) {
   font-size: 0.86em;
   margin-top: 0.2em;
 }
-body.clients .section-1 .stackable.grid .content-row.blue-column {
-  background: #0076B5;
+body.clients .section-1 .stackable.grid .content-row.testimony {
   color:#FFFFFF;
 }
-body.clients .section-1 .stackable.grid .content-row.blue-column .vcard {
+body.clients .section-1 .stackable.grid .content-row.testimony .vcard {
   margin-top:3.2em;
   margin-bottom:3em;
   padding-left:4.5em;
 }
-body.clients .section-1 .stackable.grid .content-row.blue-column .vcard .fn {
+body.clients .section-1 .stackable.grid .content-row.testimony .vcard .fn {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 1.7em;
 }
-body.clients .section-1 .stackable.grid .content-row.blue-column .vcard .role {
+body.clients .section-1 .stackable.grid .content-row.testimony .vcard .role {
   font-style: italic;
   font-size: 0.88em;
 }
-body.clients .section-1 .stackable.grid .content-row.blue-column blockquote {
+body.clients .section-1 .stackable.grid .content-row.testimony blockquote {
   margin:0;
 }
 body.clients .section-1 .stackable.grid .content-row.summary-column {
   padding-top: 9.4em;
 }
 body.clients .section-1 .stackable.grid .content-row.summary-column p {
-  line-height: 2.19em;  
+  line-height: 2.19em;
 }
 body.clients .section-1 .stackable.grid .content-row.summary-column i.icon {
   color:#0076B5;
@@ -742,6 +783,18 @@ body.clients .section .stackable.grid .client-logo {
 body.clients .section .stackable.grid .light-blue-border .client-logo {
   margin-left: 5em;
 }
+
+body.clients.vallourec .section-1 .stackable.grid .header-row {  height: 791px; }
+body.clients.vallourec .method-header h1.ui.header,
+body.clients.vallourec .section-1 .stackable.grid .content-row .ui.header.methodes  { color:      #0076B5; }
+body.clients.vallourec .section-1 .stackable.grid .content-row.testimony            { background: #0076B5; }
+
+body.clients.sikana .section-1 .stackable.grid .header-row {  height: 929px; padding-top: 4em; }
+body.clients.sikana .section-1 .stackable.grid .logo { top:19em; }
+body.clients.sikana .section-1 .stackable.grid .logo.portrait { top:45.5em; }
+body.clients.sikana .method-header h1.ui.header,
+body.clients.sikana .section-1 .stackable.grid .content-row .ui.header.methodes     { color:      #61BE8D; }
+body.clients.sikana .section-1 .stackable.grid .content-row.testimony               { background: #61BE8D; }
 
 
 
@@ -765,7 +818,7 @@ body.clients .section .stackable.grid .light-blue-border .client-logo {
   color:#4a4a4a;
   font-size: 0.65em;
   padding:0.15em 0.85em;
-  font-style: italic;  
+  font-style: italic;
   line-height: 1.2em;
   vertical-align: text-top;
   border: solid 1px #e9f377;
@@ -965,7 +1018,7 @@ body.clients .section .stackable.grid .light-blue-border .client-logo {
   color: #636363;
   font-size:0.86em;
   padding-top:0.3em;
-  line-height: 1.4em; 
+  line-height: 1.4em;
 }
 
 
@@ -1102,7 +1155,7 @@ footer.site-footer .header i.love:after {
   background-color: #ffffff;
 }
 footer.site-footer .coordonnees i.icon {
-  font-size: 1.8em; 
+  font-size: 1.8em;
   color:#fff;
 }
 footer.site-footer .grid.container {
@@ -1234,7 +1287,7 @@ body.article .content .quote.large {
   line-height: 1.3em;
 }
 body.article .content table.spaced {
-  border-collapse: separate;  
+  border-collapse: separate;
   border-spacing: 0.84em 0;
   margin: 2.9em -0.84em;
 }
@@ -1321,7 +1374,7 @@ body.article .content .blue.highlight {
   padding-left:4.3em;
 }
 .ui.vertical.sticky-article-index.menu a {
-  border-left: solid 2px #fff; 
+  border-left: solid 2px #fff;
 }
 .ui.vertical.sticky-article-index.menu a.active,
 .ui.vertical.sticky-article-index.menu a:hover {
@@ -1414,7 +1467,7 @@ body.article .content table td.nopad,
   padding:0 !important;
 }
 .nopad img {
-  display: block;  
+  display: block;
 }
 .nopad figure {
   margin:0;
@@ -1455,6 +1508,9 @@ body.article .content .blue.highlight a {
 .blue.highlight *:not(h2){
   color: #223F41;
 }
+.centered {
+  text-align: center;
+}
 /* EOF - Utility */
 
 
@@ -1469,7 +1525,7 @@ body.article .content .blue.highlight a {
 }
 #popup-devis .ui.button,
 #popup-intervention .ui.button {
-  margin: 0 0.5em 0 0;  
+  margin: 0 0.5em 0 0;
 }
 
 /* viewport limited height */
@@ -1602,18 +1658,38 @@ body.article .content .blue.highlight a {
   body.contact .page-header .grid {
     padding-top:9em;
   }
-  body.clients img.full-width {
-    width:933px;
-    height:710px;
-    object-fit: cover;
+  body.clients .links img.half-width {
+      width:100%;
+      object-fit: cover;
   }
-  body.clients .section-1 .stackable.grid .header-row {
-    height:710px;
+  body.clients .links a {
+    width:458px;
+    height: 458px;
+    margin-right: 17px;
+  }
+  body.clients .links a .text {
+    width:100%;
+    top: 16.6em;
+  }
+  body.clients .links a .logo .relative .wlu-icon img,
+  body.clients .section .stackable.grid .logo .relative .wlu-icon img {
+    height: 75%;
   }
   body.clients .section-1 .stackable.grid .logo.portrait img {
     width:160px;
     height:160px;
   }
+  body.clients img.full-width {
+    width:933px;
+    object-fit: cover;
+  }
+  body.clients.vallourec img.full-width                         { height:710px; }
+  body.clients.vallourec .section-1 .stackable.grid .header-row { height:709px; }
+  body.clients.vallourec .section-1 .stackable.grid .logo.portrait { top:39em; }
+  body.clients.sikana img.full-width                            { height:930px; }
+  body.clients.sikana .section-1 .stackable.grid .header-row    { height:929px;}
+  body.clients.sikana .section-1 .stackable.grid .logo.portrait { top:50em; }
+
   i.love.big,
   i.love.big:before,
   i.love.big:after {
@@ -1716,24 +1792,53 @@ body.article .content .blue.highlight a {
   }
 
 
-  body.clients img.full-width {
-    width:100%;
-    height:640px;
-    object-fit: cover;
+  body.clients .links a {
+    width:353px;
+    height: 353px;
+    margin-right: 17px;
   }
-  body.clients .section-1 .stackable.grid .header-row {
-    height:640px;
-    padding-top: 3em;
+  body.clients .links img.half-width {
+      width:100%;
+      object-fit: cover;
+  }
+  body.clients .links a .text {
+    width:100%;
+    top: 13.8em;
+  }
+  body.clients .links a .logo {
+    top: 6.2em;
+  }
+  body.clients .links a .logo .relative .wlu-icon img,
+  body.clients .section .stackable.grid .logo .relative .wlu-icon img {
+    height: 75%;
   }
   body.clients .section-1 .stackable.grid .logo.portrait img {
     width:140px;
     height:140px;
   }
+  body.clients img.full-width {
+    width:100%;
+    object-fit: cover;
+  }
+  body.clients .section-1 .stackable.grid .header-row {
+    padding-top: 3em;
+  }
   body.clients .section-1 .stackable.grid .content-row.summary-column i.icon {
     font-size: 1.2em;
   }
-  body.clients .section-1 .stackable.grid .content-row.blue-column .vcard {
+  body.clients .section-1 .stackable.grid .content-row.testimony .vcard {
     margin-top: 2.4em;
+  }
+  body.clients.vallourec img.full-width                         { height:640px; }
+  body.clients.vallourec .section-1 .stackable.grid .header-row { height:640px; }
+  body.clients.vallourec .section-1 .stackable.grid .logo.portrait { top:39em; }
+  body.clients.sikana img.full-width                            { height:900px; }
+  body.clients.sikana .section-1 .stackable.grid .header-row    { height:899px; }
+  body.clients.sikana .section-1 .stackable.grid .logo.portrait { top:53.6em; }
+  body.clients .glide--horizontal .glide__arrows {
+    top:0.74em;
+    width:80%;
+    margin-left:10%;
   }
 
 
@@ -1755,7 +1860,7 @@ body.article .content .blue.highlight a {
     padding-left: 1.5em;
   }
 
-  
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -1853,15 +1958,35 @@ body.article .content .blue.highlight a {
 
 
 
+  body.clients .links a {
+    width:100%;
+    height: 310px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  body.clients .links img.half-width {
+      width:100%;
+      height:310px;
+      object-fit: cover;
+  }
+  body.clients .links a .text {
+    width:100%;
+    top: 13.8em;
+  }
+  body.clients .links a .logo {
+    top: 6.2em;
+  }
+  body.clients .links a .logo .relative .wlu-icon img,
+  body.clients .section .stackable.grid .logo .relative .wlu-icon img {
+    height: 75%;
+  }
+  body.clients .section-1 .stackable.grid .logo.portrait img {
+    width:140px;
+    height:140px;
+  }
+
   body.clients img.full-width.background,
-  body.clients .section-1 .stackable.grid .logo {
-    display: none;
-  }
-  body.clients .section-1 .stackable.grid .header-row {
-    height:auto;
-    padding-top: 3em;
-    background: #010F29;
-  }
+  body.clients .section-1 .stackable.grid .logo,
   body.clients .section-1 .one.wide.column.header-row,
   body.clients .section-1 .ten.wide.column.header-row,
   body.clients .section-1 .stackable.grid .logo.portrait {
@@ -1877,11 +2002,28 @@ body.article .content .blue.highlight a {
   body.clients .section-1 .stackable.grid .content-row.summary-column i.icon {
     font-size: 1.6em;
   }
-  body.clients .section-1 .stackable.grid .content-row.blue-column .vcard {
+  body.clients .section-1 .stackable.grid .header-row {
+    padding-top: 3em;
+  }
+  body.clients .section-1 .stackable.grid .content-row.testimony .vcard {
     margin-top: 1em;
     margin-bottom: 2em;
     padding-left: 0;
   }
+  body.clients.vallourec .section-1 .stackable.grid .header-row { height: auto; background: #010F29; }
+  body.clients.sikana .section-1 .stackable.grid .header-row    { height: auto; background: #032606; }
+  body.clients.sikana .section-1 .stackable.grid .content-row.testimony .vcard {
+    margin-top: 2.4em;
+  }
+  body.clients .glide--horizontal .glide__arrows {
+    top:0.74em;
+    width:80%;
+    margin-left:10%;
+  }
+
+
+
+
 
 
   body.article .ui.grid>[class*="four wide"].column {
@@ -1915,7 +2057,7 @@ body.article .content .blue.highlight a {
   body.home .page-header h1.ui.header {
     top:6.3em;
   }
-  .ui.buttons .button.wlu, 
+  .ui.buttons .button.wlu,
   .ui.button.wlu {
     width: 100%;
   }
@@ -1932,7 +2074,7 @@ body.article .content .blue.highlight a {
     width: 100%;
     z-index: 999;
     background: #ffffff;
-    border-bottom: 1px #fff solid; 
+    border-bottom: 1px #fff solid;
     opacity: 0.88;
   }
   .sticky-nav .logo img{
@@ -1980,10 +2122,10 @@ body.article .content .blue.highlight a {
   #popup-intervention .ui.form .fields .field{
     margin: 0 0 1em
   }
-  #popup-devis .ui.button, 
+  #popup-devis .ui.button,
   #popup-intervention .ui.button{
-    margin: 0 0.5em 1em 0;  
-  } 
+    margin: 0 0.5em 1em 0;
+  }
 
   .method-header h1.ui.header,
   body.article .page-header h1.ui.header {
@@ -2037,7 +2179,7 @@ body.article .content .blue.highlight a {
   .plus-loin {
     margin-top: 1em;
   }
-  h2.ui.header, 
+  h2.ui.header,
   h2.ui.header:first-child {
     font-size: 2em;
     padding-top: 0.4em;
@@ -2053,7 +2195,7 @@ body.article .content .blue.highlight a {
   .ui.link.grid .row {
     padding:0;
   }
-  .section .methodes, 
+  .section .methodes,
   .section .methodes:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 2em;
     margin-bottom: 0.8em;
@@ -2061,6 +2203,8 @@ body.article .content .blue.highlight a {
   body.contact .page-header .grid {
     padding-top: 5em;
   }
+
+
   body.clients .section-1 .five.wide.column.content-row.relative {
     width: 100% !important;
   }
@@ -2074,6 +2218,8 @@ body.article .content .blue.highlight a {
   body.clients .section .stackable.grid .light-blue-border img.client-logo {
     margin:0 !important;
   }
+
+
   body.teaching .section-2 .stackable.grid .wlu.button {
     margin-top: 1rem;
   }
@@ -2094,11 +2240,11 @@ body.article .content .blue.highlight a {
   body.article .ui.grid>[class*="five wide"].column.nopad {
     width: 100% !important;
   }
-  body.article .page-header .infos .labels, 
+  body.article .page-header .infos .labels,
   body.article .page-header .licence .labels {
     width:33%;
   }
-  body.article .page-header .infos .valeurs, 
+  body.article .page-header .infos .valeurs,
   body.article .page-header .licence .valeurs {
     width: 60%;
   }
@@ -2167,4 +2313,8 @@ body.article .content .blue.highlight a {
   }
 
 }
+/* Glide Core */
+.glide{position:relative;width:100%}.glide__wrapper{overflow:hidden}.glide__track{position:relative;width:100%;height:100%;list-style:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-ms-touch-action:pan-Y;touch-action:pan-Y;overflow:hidden;padding:0}.glide__track.dragging{cursor:grabbing;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.glide__slide{width:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}.glide__slide a{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-user-drag:none;-moz-user-select:none;-ms-user-select:none}.glide__arrows{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.glide__arrow{cursor:pointer}.glide__bullets{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.glide--slider .glide__slide{float:left;clear:none}.glide--carousel.glide--vertical .glide__track{overflow:visible}.glide--carousel .glide__slide{float:left;clear:none}.glide--slideshow .glide__wrapper{height:100%}.glide--slideshow .glide__slide{height:100%;position:absolute;top:0;left:0;z-index:-1;-webkit-transform-style:preserve-3d;-webkit-transform:translate3d(0, 0, 0)}.glide--slideshow .glide__slide.active{z-index:1}
 
+/* Glide Theme */
+.glide__arrows{position:absolute}.glide--horizontal .glide__arrows{top:0.74em;width:60%;margin-left:20%}.glide--vertical .glide__arrows{left:50%;height:88%;margin-top:6%}.glide__arrow{position:absolute;z-index:2;color:white;text-transform:uppercase;font:11px Arial,sans-serif;padding:9px 12px;background-color:transparent;border:0;opacity:1;-webkit-transition:opacity 150ms ease,border 300ms ease-in-out;transition:opacity 150ms ease,border 300ms ease-in-out}.glide__arrow.disabled{opacity:.33}.glide__arrow:focus{outline:none}.glide__arrow:hover{border:0}.glide--horizontal .glide__arrow{-webkit-transform:translateY(-50%);transform:translateY(-50%)}.glide--horizontal .glide__arrow.prev{left:0}.glide--horizontal .glide__arrow.next{right:0}.glide--vertical .glide__arrow{-webkit-transform:translateX(-50%);transform:translateX(-50%)}.glide--vertical .glide__arrow.prev{top:0}.glide--vertical .glide__arrow.next{bottom:0}.glide__bullets{position:absolute;z-index:2;list-style:none}.glide--horizontal .glide__bullets{top:0;left:0;width:100%;height:12px;text-align:center}.glide--vertical .glide__bullets{top:50%;right:8%;width:12px;height:auto;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.glide__bullets>*{display:inline-block;background-color:rgba(255,255,255,0.5);width:20px;height:20px;padding:0;cursor:pointer;border-radius:50%;border:2px solid transparent;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out}.glide--horizontal .glide__bullets>*{margin:0 5px}.glide--vertical .glide__bullets>*{vertical-align:middle}.glide__bullets>*.active{background-color:white}.glide__bullets>*:focus{outline:none}.glide__bullets>*:hover,.glide__bullets>*:focus{border:2px solid white;background-color:rgba(255,255,255,0.5)}

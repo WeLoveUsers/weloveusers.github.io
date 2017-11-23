@@ -2,7 +2,7 @@
 var App = {
 
   _config: {
-    
+
   },
 
   run: function() {
@@ -13,6 +13,7 @@ var App = {
       this._enableModalIntervention();
       this._enableScrollSpy();
       this._enableSmoothScroll();
+      this._enableGlide();
   },
 
   trackDownloads: function() {
@@ -111,7 +112,7 @@ var App = {
   },
 
   _enableSmoothScroll: function() {
-    var 
+    var
       $menu = $('.smooth-menu'),
       $offset = 0 || $menu.data('smooth-offset');
     $menu.find('a[href]')
@@ -161,7 +162,7 @@ var App = {
         popupDevisActions = popupDevis.find('.actions'),
         popupDevisSubmit  = popupDevis.find('.button.submit'),
         popupDevisClose   = popupDevis.find('.button.close');
-    
+
     popupDevisForm.form({
         on: 'blur',
         fields: {
@@ -200,7 +201,7 @@ var App = {
                 popupDevisSubmit.removeClass('disabled');
                 popupDevisForm.hide();
                 popupDevisForm.next('.message').show();
-              }   
+              }
           });
         }
       })
@@ -233,7 +234,7 @@ var App = {
         popupInterventionActions = popupIntervention.find('.actions'),
         popupInterventionSubmit  = popupIntervention.find('.button.submit'),
         popupInterventionClose   = popupIntervention.find('.button.close');
-    
+
     popupInterventionForm.form({
         on: 'blur',
         fields: {
@@ -272,7 +273,7 @@ var App = {
                 popupInterventionSubmit.removeClass('disabled');
                 popupInterventionForm.hide();
                 popupInterventionForm.next('.message').show();
-              }   
+              }
           });
         }
       })
@@ -297,13 +298,33 @@ var App = {
     $('#bt-intervention').on( "click", function () {
       popupIntervention.modal('show');
     });
-  }  
+  },
+
+  _enableGlide: function() {
+    var dependent = $('.portrait .glide').glide({
+				type: 'slider',
+				touchDistance: false,
+				dragDistance: false,
+				hoverpause: false,
+				autoplay: false
+			}).data('glide_api');
+
+    $('.testimony .glide').glide({ type: 'slider', autoplay: 5500 })
+				.on('swipeEnd.glide', function(event, data) {
+					dependent.go('=' + data.index);
+				}).on('duringTransition.glide', function(event, data) {
+					dependent.go('=' + data.index);
+				}).on('swipeMove.glide', function(event, data) {
+					dependent.animate(data.swipe.distance);
+				});
+
+  }
 };
 
 var AppHelpers = {
   getHighestDensityImageSrc: function(srcSet) {
     if (!srcSet) return
-    
+
     var srcSetArray = this.parseSrcset(srcSet),
         imgSrc = "",
         highestDensity = 0;
@@ -485,10 +506,10 @@ var AppHelpers = {
     loader.className = 'ui loader'
     loaderContainer.appendChild(loader)
     target.parentNode.appendChild(loaderContainer)
-    
+
     // Replace image with highest resolution
     var tmpImg = document.createElement('img')
-    
+
     tmpImg.onload = $.proxy(function () {
       target.removeAttribute('srcset')
       target.src    = tmpImg.src
