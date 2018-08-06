@@ -14,6 +14,7 @@ var App = {
       this._enableScrollSpy();
       this._enableSmoothScroll();
       this._enableGlide();
+      this._addEnglishMessage();
   },
 
   trackDownloads: function() {
@@ -318,6 +319,20 @@ var App = {
 					dependent.animate(data.swipe.distance);
 				});
 
+  },
+
+  _addEnglishMessage: function() {
+      var userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.split('-')[0].toLowerCase();
+      //alert(userLang);
+      //
+      if (userLang != 'fr') {
+        $('#speaking-english').insertBefore($('header.page-header'));
+        $('#speaking-english').transition({
+          animation  : 'drop',
+          duration   : '0.7s',
+        });
+      }
   }
 };
 

@@ -474,6 +474,17 @@ h2.ui.header:first-child {
 body.home .main.container {
   padding-top: 4em;
 }
+
+body.home #speaking-english {
+  display: none;
+  background:#dddddd;
+  color:#636363;
+  margin-bottom:3em !important;
+}
+body.home #speaking-english .ui.button {
+  margin:0;
+}
+
 body.home .page-header {
   padding-top:0em;
 }
@@ -2056,6 +2067,10 @@ body.article .content .blue.highlight a {
 
   body.home .page-header h1.ui.header {
     top:6.3em;
+  }
+  body.home #speaking-english .ui.button {
+    padding-left:1em;
+    padding-right:1em;
   }
   .ui.buttons .button.wlu,
   .ui.button.wlu {
