@@ -1,0 +1,50 @@
+<div class="ui basic modal" id="nav-mobile">
+    <i class="close icon"></i>
+    <div class="ui container centered grid">
+      <div class="row">
+          <a href="{{ site.baseurl }}/" class="lien-accueil {% if page.section == "home" %}active{% endif %}">Accueil</a>
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="header"><span class="first">We {% include love.html %}</span>Research</div>
+        <div class="ui submenu">
+          <a href="{{ site.baseurl }}/recherche-utilisateur/protocoles-recherche-utilisateur.html" class="item subitem {% if page.subsection == "research-protocols" %}active{% endif %}">Nos protocoles de recherche</a>
+          <a href="{{ site.baseurl }}/recherche-utilisateur/methodologie-recherche-utilisateur.html" class="item subitem {% if page.subsection == "research-methodology" %}active{% endif %}">Notre méthodologie</a>
+        </div>
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="header"><span class="first">We {% include love.html %}</span>Teaching</div>
+        <div class="ui submenu">
+          <a href="{{ site.baseurl }}/formation/formation-recherche-ux-design-groupe.html" class="item subitem {% if page.subsection == "teaching-groups" %}active{% endif %}">Nos formations de groupe</a>
+          <a href="{{ site.baseurl }}/formation/coaching-recherche-utilisateur-ux.html" class="item subitem {% if page.subsection == "coaching" %}active{% endif %}">Notre coaching individuel</a>
+        </div>
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="header"><span class="first">We {% include love.html %}</span>Sharing</div>
+        <div class="ui submenu">
+          <a href="{{ site.baseurl }}/partage/outils-travail.html" class="item subitem {% if page.subsection == "tools" %}active{% endif %}">Nos outils de travail</a>
+          <a href="{{ site.baseurl }}/partage/supports-cours.html" class="item subitem {% if page.subsection == "materials" %}active{% endif %}">Nos supports de cours</a>
+          <a href="{{ site.baseurl }}/partage/publications.html" class="item subitem {% if page.subsection == "publications" %}active{% endif %}">Nos publications</a>
+        </div>
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="header"><span class="first">We {% include love.html %}</span>Clients</div>
+        <div class="ui submenu">
+          <a href="{{ site.baseurl }}/clients/projets.html" class="item subitem {% if page.subsection == "projets" %}active{% endif %}">Nos projets</a>
+        </div>
+      </div>
+      <hr />
+
+      <div class="row">
+        <a href="{{ site.baseurl }}/contact/index.html" class="item {% if page.section == "contact" %}active{% endif %}">Contact</a>
+      </div>
+
+  </div>
+</div>

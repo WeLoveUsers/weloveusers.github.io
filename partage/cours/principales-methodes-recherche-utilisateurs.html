@@ -1,0 +1,144 @@
+---
+layout: article
+title: Les principales méthodes de recherche utilisateurs
+section: sharing
+subsection: materials
+excerpt: Quelles sont les principales méthodes utilisées en recherche utilisateurs et quelles sont les grandes étapes pour les mettre en pratique ?
+redirect_from:
+  - /recherche/observation-terrain.html
+  - /recherche/entretien-recherche.html
+  - /recherche/auto-confrontation-video.html
+  - /recherche/questionnaire.html
+  - /recherche/focus-group.html
+  - /recherche/tri-de-cartes.html
+  - /recherche/personas.html
+  - /recherche/scenarios.html
+  - /recherche/experience-maps.html
+  - /recherche/test-utilisateurs.html
+  - /recherche/audit-ergonomique.html
+  - /recherche/mesure-quantitative-experience-utilisateur.html
+---
+
+<header class="page-header relative">
+  <h1 class="ui header center aligned">{{ page.title }}</h1>
+
+  <div class="ui stackable grid container">
+    <div class="four wide infos nopad column">
+      <div class="labels">Version :<br />Date :<br />Auteur(s) :</div>
+      <div class="valeurs">1.6<br />30 oct. 2019<br /><a href="#auteur">Florent Jaouali</a></div>
+    </div>
+    <div class="one wide column"></div>
+    <div class="five wide licence nopad column">
+      <div class="labels">Licence :</div>
+      <div class="valeurs"><a href="http://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank"><i class="icon wlu-cc"></i><i class="icon wlu-by"></i><i class="icon wlu-sa"></i><span class="hidden">Attribution - Partage dans les Mêmes Conditions 4.0 International</span></a></div>
+      <div class="contribuer labels">Contribuer :</div>
+      <div class="contribuer valeurs">Téléchargez le PDF, ajoutez vos commentaires et <a href="#auteur">informez l’auteur</a>.</div>
+    </div>
+    <div class="one wide column"></div>
+    <div class="five wide right aligned column">
+      <div class="telecharger-article">
+        <a class="track-pdf-download ui button wlu" href="/documents/supports-cours/cours/weloveusers_-_les_principales_méthodes_de_recherche_utilisateurs-V1.6.pdf">Télécharger l’article (PDF)</a>
+        <span class="label">~ 1 Mo</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ui grid stackable content container">
+  <div class="four wide nopad column computer only">
+    <nav class="ui menu vertical spy-menu smooth-menu sticky-article-index" data-spy-offset="230" data-smooth-offset="160">
+      <a class="active" href="#chapitre1">Le puzzle de la recherche utilisateur</a>
+      <a href="#chapitre2">Aperçu des différentes méthodes</a>
+{% for methode in site.data.methodes.recherche %}
+      <a href="#chapitre{{ methode.numero }}">{{ methode.titre }}</a>
+{% endfor %}
+      <a href="#auteur">Auteur</a>
+    </nav>
+  </div>
+  <div class="sixteen wide tablet twelve wide computer column">
+
+    <h2 class="spy" id="chapitre1">Le puzzle de la recherche utilisateur</h2>
+
+    <h3>Définition</h3>
+
+    <p>Par « recherche utilisateur », nous entendons : construire des connaissances sur les utilisateurs d’un produit ou service.</p>
+
+    <h3>Le puzzle</h3>
+    <p>Construire cette connaissance, c’est comme essayer de remplir un puzzle. Il y a de nombreuses pièces à rassembler et plus les pièces rassemblées sont nombreuses, plus l’image complète est perceptible.</p>
+    <p>Pour trouver les différentes pièces, il faudra probablement utiliser diverses méthodes de recherche et des différents chercheurs.</p>
+
+    <h3>Illustration</h3>
+
+    <figure class="thumbnails ui fluid image" data-toggle="lightbox">
+      <img src="/images/partage/articles/puzzle-recherche-utilisateur.jpg" srcset="/images/partage/articles/puzzle-recherche-utilisateur.jpg, /images/partage/articles/puzzle-recherche-utilisateur@2x.jpg 2x" alt="Le puzzle de la recherche utilisateurs" data-action="zoom">
+      <figcaption>Figure 1 - Le puzzle de la recherche utilisateurs</figcaption>
+    </figure>
+
+    <h2 class="spy" id="chapitre2">Aperçu des différentes méthodes</h2>
+
+    <div class="ui link grid nomargin container">
+{% for methode in site.data.methodes.recherche %}
+      <div class="row">
+        <div class="ten wide method-content nopad column">
+          <div class="header">{{ methode.titre }}</div>
+          <div class="description"><p>{{ methode.resume }}</p></div>
+        </div>
+        <div class="six wide method-workload column">
+          <div class="workload"><span class="title"><i class="icon wait"></i>Durée estimée :</span>{{ methode.duree }}</div>
+        </div>
+      </div>
+{% endfor %}
+    </div>
+
+
+{% for methode in site.data.methodes.recherche %}
+<div class="method-container">
+    <h2 class="spy" id="chapitre{{ methode.numero }}">{{ methode.titre }}</h2>
+    <h3>En résumé</h3>
+    <div class="text">
+      {{ methode.detail }}
+      <p><span class="title"><i class="icon wait"></i><strong>Durée estimée :</strong></span> <a class="popup" data-html="{{ methode.estimation }}" data-variation="wide inverted">{{ methode.duree }}</a></p>
+    </div>
+
+    {% if methode.methodologie %}
+    <h3>Déroulement</h3>
+    <div class="methodologie-recherche text">{{ methode.methodologie }}</div>
+    {% endif %}
+
+    {% if methode.illustrations %}
+    <h3>Illustrations</h3>
+    <div class="text">{{ methode.illustrations }}</div>
+    {% endif %}
+
+    {% if methode.plus %}
+    <h3>Plus</h3>
+    <div class="text">{{ methode.plus }}</div>
+    {% endif %}
+</div>
+{% endfor %}
+
+    <div class="blue highlight">
+      <h2 class="spy" id="auteur">Auteur</h2>
+      <div class="contact">
+        <div class="ui grid stackable vcard">
+          <div class="five wide column">
+            <img src="/images/equipe/florent-jaouali.png" srcset="/images/equipe/florent-jaouali.png, /images/equipe/florent-jaouali@2x.png 2x" alt="Portrait de Florent Jaouali" class="photo">
+          </div>
+          <div class="eleven wide column">
+            <span class="fn">Florent Jaouali</span>
+            <div class="role">Ergonome, Sociologue des usages</div>
+            <div class="tel">
+                <span class="type">Mobile</span> :
+                <span class="value"><a href="tel:0637332655">06 37 33 26 55</a></span>
+            </div>
+            <div class="email">
+              <span class="type">E-mail</span> :
+              <span class="value"><a class="email" href="mailto:f.jaouali@weloveusers.com">f.jaouali@weloveusers.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

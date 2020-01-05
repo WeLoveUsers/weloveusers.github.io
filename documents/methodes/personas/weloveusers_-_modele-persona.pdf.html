@@ -1,0 +1,11 @@
+---
+---
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting...</title>
+{% assign redirect_url = "/documents/supports-cours/cours/personas/weloveusers_-_modele-persona.pdf" | prepend: site.baseurl | prepend: site.url %}
+<link rel="canonical" href="{{ redirect_url }}">
+<meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+<h1>Redirection en cours...</h1>
+<a href="{{ redirect_url }}">Cliquez ici si vous n'êtes pas redirigé automatiquement.</a>
+<script>location="{{ redirect_url }}"</script>
