@@ -172,10 +172,19 @@ body.article .content .sixteen.wide.column a,
 .plus-loin a,
 .programme-formation a,
 .public-cible a,
-body.sharing .ui.cards>.card>.content>.description a {
+body.sharing .ui.cards>.card>.content>.description a,
+.ui.main.container a:not(.button):not(.row),
+.ui.main.container .fluid.card a:not(.button):not(.row) {
+  color: #70d4af;
+  background:transparent;
+  text-decoration: none;
+}
+.blue.highlight body.article .content .sixteen.wide.column a,
+.ui.main.container .blue.highlight a:not(.button):not(.row) {
   color: inherit;
   text-decoration: underline;
 }
+
 .page-header a:hover,
 .methodology-steps a:hover,
 .method-description .text a:hover,
@@ -183,26 +192,28 @@ body.article .content .sixteen.wide.column a:hover,
 .plus-loin a:hover,
 .programme-formation a:hover,
 .public-cible a:hover,
-body.sharing .ui.cards>.card>.content>.description a:hover {
-  color: #111111;
-  text-decoration: underline;
+body.sharing .ui.cards>.card>.content>.description a:hover,
+.ui.main.container a:hover:not(.button):not(.row) {
+  color: #ffffff;
+  background:#70d4af;
 }
+
+.blue.highlight body.article .content .sixteen.wide.column a:hover,
+.ui.main.container .blue.highlight a:hover:not(.button):not(.row) {
+  color: inherit;
+  text-decoration: underline;
+  background:transparent;
+}
+
 .ui.popup.inverted a:hover {
   color: #dddddd;
   text-decoration: underline;
 }
-.ui.main.container a:not(.button):not(.row) {
-  color: #636363;
-  text-decoration: underline;
-}
-.ui.main.container a:hover:not(.button):not(.row) {
-  color: #111111;
-}
-.ui.main.container .fluid.card a:not(.button):not(.row),
-.ui.main.container .ui.menu.vertical a:not(.button):not(.row) {
+
+/* .ui.main.container .ui.menu.vertical a:not(.button):not(.row) {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 
 /* BOF - Main navigation */
@@ -670,6 +681,9 @@ body.sharing .ui.cards>.card>.content>.meta {
   font-family: 'Oswald', sans-serif;
   background-color: #f3f3f3;
 }
+body.sharing .supports-cours .ui.cards>.card>.content>.header a {
+  background: transparent;
+}
 body.sharing .ui.cards>.card>.content>.meta .action .ui.button {
   margin: -1em 0.25em 0 0em;
 }
@@ -677,9 +691,21 @@ body.sharing .ui.cards>.card>.content>.meta+.description {
   margin:0;
 }
 body.sharing .ui.cards>.card>.content>.description {
-
   padding:1em 1.44em 1em 1.44em;
   border: 1px #f3f3f3 solid;
+}
+body.sharing .supports-cours .ui.cards>.card.over>.content>.header a {
+  color:#70d4af;
+}
+body.sharing .supports-cours .ui.cards>.card.over>.content>.text {
+  background:#70d4af;
+}
+body.sharing .supports-cours .ui.cards>.card.over>.content>.text .description{
+  color:#fff;
+}
+body.sharing .supports-cours .ui.cards>.card.over>.content>a.image img {
+  filter: saturate(2);
+  -webkit-filter: saturate(2);
 }
 
 body.sharing .method-container {
@@ -1493,7 +1519,7 @@ body.article .content table.ui.table.model td {
   border-radius: 0;
   padding-top:1.3em;
 }
-.ui.vertical.sticky-article-index.menu a {
+.ui.main.container .ui.vertical.sticky-article-index.menu a:not(.button):not(.row) {
   display: block;
   font-weight: 400;
   font-family: 'Oswald', sans-serif;
@@ -1502,22 +1528,24 @@ body.article .content table.ui.table.model td {
   color: #A4A4A4;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
+  background: transparent;
 }
-.ui.vertical.sticky-article-index.menu a,
-.ui.vertical.sticky-article-index.menu a.active,
-.ui.vertical.sticky-article-index.menu a:hover {
+.ui.main.container .ui.vertical.sticky-article-index.menu a,
+.ui.main.container .ui.vertical.sticky-article-index.menu a.active,
+.ui.main.container .ui.vertical.sticky-article-index.menu a:hover {
   padding-left:1.24em;
 }
-.ui.vertical.sticky-article-index.menu a.sub {
+.ui.main.container .ui.vertical.sticky-article-index.menu a.sub {
   padding-left:4.3em;
 }
-.ui.vertical.sticky-article-index.menu a {
+.ui.main.container .ui.vertical.sticky-article-index.menu a {
   border-left: solid 2px #fff;
 }
-.ui.vertical.sticky-article-index.menu a.active,
-.ui.vertical.sticky-article-index.menu a:hover {
+.ui.main.container .ui.vertical.sticky-article-index.menu a:not(.button):not(.row).active,
+.ui.main.container .ui.vertical.sticky-article-index.menu a:hover:not(.button):not(.row) {
   color: #636363;
   border-left: solid 2px #57ebf9;
+  background: transparent;
 }
 /* EOF - Nav Article */
 

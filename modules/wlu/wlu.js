@@ -340,12 +340,14 @@ var App = {
   },
 
   _enableCardsHighlight: function () {
-    $('.supports-cours .fluid.card').on('mouseenter', function () {
-      $(this).transition({
-        animation : 'pulse',
-        duration   : '500ms'
+    $('.supports-cours .fluid.card')
+      .on('mouseenter', function () {
+        $(this).addClass('over');
       })
-    });
+      .on('mouseleave', function () {
+        $(this).removeClass('over');
+      });
+    //#70d4af none
   }
 
 };
