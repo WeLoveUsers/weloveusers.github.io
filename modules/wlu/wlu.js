@@ -7,7 +7,10 @@ var App = {
 
   run: function() {
       this._buildMainNav();
-      this._enableStickyArticleIndex();
+      if ($(window).width() > 992) {
+        this._enableStickyArticleIndex();
+        this._enableArticleCoachingPromo();
+      }
       this._enablePopups();
       this._enableModalDevis();
       this._enableModalIntervention();
@@ -73,11 +76,20 @@ var App = {
     if($(window).height() <= 750) {
       offset = 120;
     }
-    if($(window).width() > 992) {
-      $('.sticky-article-index').sticky({
-        offset       : offset
-      });
-    }
+    $('.sticky-article-index').sticky({
+      offset       : offset
+    });
+  },
+
+  _enableArticleCoachingPromo: function() {
+    $('.coaching-promo')
+      .visibility({
+        offset : -1200,
+        onBottomPassed : function(calculations) {
+          $(this).transition('drop');
+        }
+      })
+    ;
   },
 
   _enableScrollSpy: function() {
