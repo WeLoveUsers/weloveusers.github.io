@@ -1509,7 +1509,36 @@ body.article .content table.ui.table.model th {
 body.article .content table.ui.table.model td {
   font-size: 1em;
 }
-
+body.article .content table.ui.table.highlight {
+  padding: 0;
+  border: 0;
+}
+body.article .content table.ui.table.highlight th {
+  white-space: nowrap;
+  border-top: 3px #ffffff solid;
+  padding: 1.6em;
+}
+body.article .content table.ui.table.highlight td {
+  border: 3px #36f8b0 solid;
+  border-bottom: 0;
+  padding: 1.6em;
+}
+body.article .content table.ui.table.highlight tr:last-child td {
+  border-bottom: 3px #36f8b0 solid;
+}
+body.article .content table.ui.table.highlight tr:first-child th {
+  border-top: 3px #36f8b0 solid;
+}
+body.article .content table.ui.table.lowlight {
+  border: 3px #F3F3F3 solid;
+}
+body.article .content table.ui.table.lowlight th {
+  background: #F3F3F3;
+  padding: 1.6em;
+}
+body.article .content table.ui.table.lowlight td {
+  padding: 1.6em;
+}
 
 /* EOF - Article */
 
