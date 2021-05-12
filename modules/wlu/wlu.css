@@ -164,6 +164,19 @@ h5 {
   padding: 1em 2em 1em;
 }
 
+.ui.statistic>.label, .ui.statistics .statistic>.label,
+.ui.statistic>.value, .ui.statistics .statistic>.value {
+  font-family: 'Oswald', sans-serif;
+  /* font-weight: 300;
+  font-size: 1.7em;
+  line-height: 1.2em; */
+  color: #636363;
+}
+.ui.statistic .explanation {
+  font-family: 'PT Serif', serif;
+  padding: 2em 4em 0 4em;
+}
+
 a.popup {
   cursor: pointer;
 }
@@ -562,8 +575,13 @@ body.research section.recherche-progressive img.research-steps {
   object-fit: cover;
 }
 
-
-body.teaching section.themes-formation h2 {
+body.teaching section.demarche-qualite,
+body.teaching section.themes-formation {
+  margin-top:2em;
+}
+body.teaching section.themes-formation h2,
+body.teaching section.demarche-qualite h2,
+body.teaching section.exemples-formation h2{
   font-size: 1.5em;
   color: #70d4af;
   font-weight: 400;
@@ -616,6 +634,20 @@ body.teaching .section-2 .stackable.grid .wlu.button {
 }
 body.teaching .section-2 .stackable.grid .light-grey-border .client-logo {
   margin: 3em 0 3em 5em;
+}
+
+body.teaching .ui.card a.button, .ui.cards>.card a.button {
+  margin-bottom: 0;
+  width:100%;
+}
+body.teaching .ui.card .ui.sub.header {
+font-size: .66em;
+}
+body.teaching .ui.card>:only-child,
+body.teaching .ui.cards>.card>:only-child,
+body.teaching .ui.card,
+body.teaching.ui.cards>.card {
+  border-radius: 0;
 }
 
 
