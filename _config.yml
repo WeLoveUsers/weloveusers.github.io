@@ -22,7 +22,8 @@ exclude: [
           "semantic.json",
           "run.sh",
           "Gemfile",
-          "Gemfile.lock"
+          "Gemfile.lock",
+          "_archives"
          ]
 
 plugins:
