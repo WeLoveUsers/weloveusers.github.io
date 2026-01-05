@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    {% include head.html %}
+</head>
+<body class="flex flex-col min-h-screen font-sans">
+    
+    {% include header_internal.html %}
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow w-full px-6 focus:outline-none" tabindex="-1">
+        <div class="max-w-5xl mx-auto py-12 md:py-24">
+            {{ content }}
+        </div>
+    </main>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+
+</body>
+</html>

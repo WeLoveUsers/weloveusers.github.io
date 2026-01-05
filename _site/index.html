@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil | We Love Users</title>
+<meta name="description" content="Éclairer des décisions produit complexes à partir de la réalité des usages humains.">
+
+<!-- Favicon (Heart) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E0553D'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+
+<!-- Fonts (CDN) -->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS (CDN) -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#FAF9F7',    // Fond principal (Eggshell)
+                    ink: '#1A1A1A',      // Noir profond (Uniformisé)
+                    graphite: '#5F5F5F', // Gris texte secondaire
+                    stone: '#E2E0DC',    // Gris UI / séparateurs
+                    flame: '#E0553D',    // Corail signature
+                },
+                fontFamily: {
+                    sans: ['Satoshi', 'sans-serif'],
+                    serif: ['Times New Roman', 'Times', 'Liberation Serif', 'serif'],
+                },
+                borderRadius: {
+                    'brand': '16px',
+                },
+                spacing: {
+                    '18': '4.5rem',
+                    '22': '5.5rem',
+                    '26': '6.5rem',
+                }
+            }
+        }
+    }
+</script> -->
+
+</head>
+<body class="flex flex-col min-h-screen font-sans">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-flame text-cream px-4 py-3 rounded-brand z-[60] font-medium shadow-xl ring-2 ring-white">
+        Aller au contenu principal
+    </a>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header class="w-full py-6 md:py-8 px-6 border-b border-stone sticky top-0 bg-[#FAF9F7]/95 backdrop-blur-sm z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="font-serif text-2xl tracking-tight font-medium hover:text-graphite transition-colors relative z-50">
+            We Love Users
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide items-center" aria-label="Navigation principale">
+            <a href="/" class="nav-link transition-colors active">Accueil</a>
+            <a href="/offres" class="nav-link transition-colors ">Nos Offres</a>
+            <a href="/methode" class="nav-link transition-colors ">Notre Méthode</a>
+            <a href="/a-propos" class="nav-link transition-colors ">À propos</a>
+            <span class="w-1 h-1 rounded-full bg-stone mx-1" aria-hidden="true"></span>
+            <a href="/analyses" class="nav-link transition-colors text-graphite ">Analyses</a>
+        </nav>
+
+        <a href="/contact" class="hidden md:inline-block px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+            Parler de votre situation
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-ink relative z-50 focus:outline-none p-2" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect id="burger-top" y="4" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+                <rect id="burger-middle" y="11" width="24" height="2" fill="currentColor" class="transition-opacity duration-300"/>
+                <rect id="burger-bottom" y="18" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-start pt-32 px-6 h-screen overflow-y-auto md:hidden" aria-hidden="true">
+        <nav class="flex flex-col gap-8 text-2xl font-serif text-ink items-center">
+            <a href="/" class="mobile-link hover:text-flame transition-colors">Accueil</a>
+            <a href="/offres" class="mobile-link hover:text-flame transition-colors">Nos Offres</a>
+            <a href="/methode" class="mobile-link hover:text-flame transition-colors">Notre Méthode</a>
+            <a href="/a-propos" class="mobile-link hover:text-flame transition-colors">À propos</a>
+            <a href="/analyses" class="mobile-link hover:text-flame transition-colors">Analyses</a>
+            <div class="w-12 border-t border-stone my-4" aria-hidden="true"></div>
+            <a href="/contact" class="w-full text-center px-8 py-4 bg-flame text-cream rounded-brand text-lg font-sans shadow-sm hover:bg-opacity-90 transition-all">Parler de votre situation</a>
+        </nav>
+        <div class="mt-auto pb-12 text-center text-sm text-graphite">
+            <p>© We Love Users</p>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow w-full px-6 focus:outline-none" tabindex="-1">
+        <div class="max-w-5xl mx-auto py-12 md:py-24">
+            <!-- 1. HERO SECTION -->
+<section class="mb-24 md:mb-32 relative">
+    <div class="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
+        <!-- Text Content -->
+        <div class="md:col-span-7 relative z-10">
+            <h1 class="font-serif text-5xl md:text-7xl leading-[1.05] text-ink mb-10 tracking-tight">
+                Éclairer des décisions produit et service
+                <span class="text-graphite">à partir de la réalité des usages humains.</span>
+            </h1>
+            
+            <div class="prose-lg text-ink font-light leading-relaxed mb-12 max-w-2xl">
+                <p>
+                    Les données, analyses et outils d’IA apportent des éléments essentiels.
+                </p>
+                <p>
+                    Mais certaines décisions restent difficiles à prendre&nbsp;: quand les enjeux sont forts, que l’incertitude persiste et que les usages réels ne se laissent pas réduire à des indicateurs.
+                </p>
+                <p class="font-medium text-ink">
+                    Nous allons sur le terrain pour comprendre ce qui se joue vraiment et aider les équipes produit à décider avec justesse.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-5">
+                <a href="/contact" class="inline-flex justify-center items-center px-8 py-4 bg-flame text-cream text-base font-bold rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+                    Parler de votre situation
+                </a>
+                <a href="/offres" class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-stone text-ink text-base font-bold rounded-brand hover:border-ink transition-all duration-300 tracking-wide">
+                    Découvrir nos offres
+                </a>
+            </div>
+        </div>
+        
+        <!-- VISUAL: Documentary style -->
+        <div class="md:col-span-5 relative group mt-12 md:mt-0">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-brand bg-stone relative shadow-xl">
+                <img src="/images/eclairer-decisions.jpg" 
+                     alt="Session de travail équipe produit" 
+                     class="w-full h-full object-cover opacity-90 mix-blend-multiply filter contrast-110 grayscale transition-transform duration-1000 group-hover:scale-105" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 1A. KEY FIGURES BAND -->
+<section class="mb-32 border-y border-stone py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-stone">
+        <div class="text-center pt-4 md:pt-0">
+            <span class="block font-serif text-5xl md:text-7xl text-ink mb-3">12</span>
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-graphite">Années d'expérience</span>
+        </div>
+        <div class="text-center pt-10 md:pt-0">
+            <span class="block font-serif text-5xl md:text-7xl text-ink mb-3">~60</span>
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-graphite">Missions stratégiques</span>
+        </div>
+        <div class="text-center pt-10 md:pt-0">
+            <span class="block font-serif text-5xl md:text-7xl text-ink mb-3">~1000</span>
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-graphite">Utilisateurs rencontrés</span>
+        </div>
+    </div>
+</section>
+
+<!-- 2. SECTION NOTRE RÔLE -->
+<section class="mb-32">
+    <div class="max-w-4xl mx-auto text-center md:text-left">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-flame mb-8 block">Notre rôle</span>
+        <h2 class="font-serif text-4xl md:text-6xl text-ink leading-tight mb-10">
+            Sécuriser vos arbitrages produit et service quand les données seules ne suffisent plus.
+        </h2>
+        <div class="prose-lg text-graphite md:text-2xl font-light leading-relaxed">
+            <p>
+                Nous intervenons là où les décisions sont à la fois rationnelles, humaines et relationnelles.
+            </p>
+            <p>
+                En tant que <strong>tiers indépendant</strong>, nous aidons les décideurs à tenir la complexité du réel sans la simplifier artificiellement, pour transformer l'incertitude en convictions actionnables.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 3. SECTION LE TERRAIN -->
+<section class="mb-32">
+    <div class="bg-ink text-cream rounded-brand overflow-hidden relative grid md:grid-cols-2">
+        <!-- Image Section -->
+        <div class="relative h-80 md:h-auto bg-graphite">
+             <img src="/images/ancrage-terrain.jpg" 
+                  alt="Observation en situation réelle" 
+                  class="absolute inset-0 w-full h-full object-cover opacity-70 mix-blend-normal grayscale" />
+        </div>
+        
+        <!-- Text Content -->
+        <div class="p-10 md:p-20 flex flex-col justify-center">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-flame mb-8 block">Point d'ancrage</span>
+            <h2 class="font-serif text-3xl md:text-5xl mb-8 leading-tight">
+                Le terrain comme point d’ancrage.
+            </h2>
+            <div class="text-stone text-lg md:text-xl space-y-6 opacity-90 leading-relaxed font-light">
+                <p>
+                    Sortir de la salle de réunion. Aller voir comment les produits vivent réellement&nbsp;: dans le bruit, les interruptions, les contraintes du métier, les contournements.
+                </p>
+                <p>
+                    Le terrain ne livre pas des réponses parfaites. Il montre des situations humaines, imparfaites, parfois inconfortables.
+                </p>
+                <p class="text-cream font-medium italic">
+                    Le terrain n'est pas un luxe, c'est l'assurance vie de vos décisions stratégiques.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. POUR QUI NOUS TRAVAILLONS -->
+<section class="mb-32 border-t border-stone pt-24">
+    <div class="grid md:grid-cols-12 gap-16">
+        <div class="md:col-span-5">
+            <h2 class="font-serif text-4xl md:text-5xl text-ink leading-tight mb-8">
+                Pour qui nous travaillons
+            </h2>
+            <p class="text-graphite text-lg md:text-xl font-light leading-relaxed mb-8">
+                Nous accompagnons des équipes qui conçoivent, font évoluer et arbitrent des produits et services numériques.
+            </p>
+            <p class="text-ink font-medium text-lg">
+                Nous intervenons lorsque les décisions deviennent structurantes, sensibles, parfois difficiles à porter collectivement.
+            </p>
+        </div>
+
+        <div class="md:col-span-7 grid gap-5">
+            <div class="bg-white p-8 rounded-brand border border-stone flex items-center gap-6 group hover:border-flame transition-colors duration-300">
+                <div class="p-3 bg-stone/20 rounded-full text-ink group-hover:text-flame transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <span class="text-xl text-ink font-bold">Équipes Produit (CPO, Head of Product, PM)</span>
+            </div>
+            <div class="bg-white p-8 rounded-brand border border-stone flex items-center gap-6 group hover:border-flame transition-colors duration-300">
+                <div class="p-3 bg-stone/20 rounded-full text-ink group-hover:text-flame transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <span class="text-xl text-ink font-bold">Équipes Design produit / service</span>
+            </div>
+            <div class="bg-white p-8 rounded-brand border border-stone flex items-center gap-6 group hover:border-flame transition-colors duration-300">
+                <div class="p-3 bg-stone/20 rounded-full text-ink group-hover:text-flame transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <span class="text-xl text-ink font-bold">Éditeurs SaaS, Plateformes & Outils métiers</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. SITUATIONS COMPLEXES -->
+<section class="mb-32">
+    <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-flame mb-4 block">Situations complexes</span>
+        <h2 class="font-serif text-4xl text-ink leading-tight mb-6">
+            Des arbitrages produit où l'erreur coûte cher.
+        </h2>
+        <p class="text-graphite text-lg leading-relaxed">
+            Certaines décisions ne bloquent pas par manque de données, mais parce qu’elles engagent des responsabilités et des investissements majeurs.
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <!-- Situation 1 -->
+        <article class="bg-cream border border-stone p-8 rounded-brand hover:border-flame transition-colors duration-300">
+            <h3 class="font-serif text-2xl text-ink mb-4">Arbitrage de roadmap</h3>
+            <p class="text-graphite text-sm mb-4 leading-relaxed italic">
+                Enjeu&nbsp;: Éviter le gaspillage de ressources sur des fonctionnalités non critiques.
+            </p>
+            <p class="text-graphite text-base leading-relaxed mb-4">
+                Le backlog déborde. Les discussions s’allongent et personne ne veut prendre une décision qui pourrait fragiliser l’adoption. Le terrain permet de déplacer le débat vers la valeur réelle.
+            </p>
+            <p class="text-ink font-medium text-sm border-l-2 border-flame pl-3">
+                Sécuriser le ROI en priorisant l'usage effectif sur l'opinion interne.
+            </p>
+        </article>
+
+        <!-- Situation 2 -->
+        <article class="bg-cream border border-stone p-8 rounded-brand hover:border-flame transition-colors duration-300">
+            <h3 class="font-serif text-2xl text-ink mb-4">Angle mort data</h3>
+            <p class="text-graphite text-sm mb-4 leading-relaxed italic">
+                Enjeu&nbsp;: Comprendre la baisse de performance malgré des KPIs au vert.
+            </p>
+            <p class="text-graphite text-base leading-relaxed mb-4">
+                Les métriques sont stables, mais le support sature et le churn augmente silencieusement. L'observation directe révèle les frictions que les analytics ne captent pas.
+            </p>
+            <p class="text-ink font-medium text-sm border-l-2 border-flame pl-3">
+                Identifier les risques de désengagement avant qu'ils ne deviennent critiques.
+            </p>
+        </article>
+
+        <!-- Situation 3 -->
+        <article class="bg-cream border border-stone p-8 rounded-brand hover:border-flame transition-colors duration-300">
+            <h3 class="font-serif text-2xl text-ink mb-4">Exploration amont</h3>
+            <p class="text-graphite text-sm mb-4 leading-relaxed italic">
+                Enjeu&nbsp;: Réduire l'incertitude avant d'engager les budgets de développement.
+            </p>
+            <p class="text-graphite text-base leading-relaxed mb-4">
+                Avant de lancer un nouveau service, il faut accepter de confronter l'idée au terrain sans complaisance pour valider la rencontre avec un besoin métier réel.
+            </p>
+            <p class="text-ink font-medium text-sm border-l-2 border-flame pl-3">
+                Éliminer les fausses pistes dès la phase de conception.
+            </p>
+        </article>
+
+        <!-- Situation 4 -->
+        <article class="bg-cream border border-stone p-8 rounded-brand hover:border-flame transition-colors duration-300">
+            <h3 class="font-serif text-2xl text-ink mb-4">Décision critique</h3>
+            <p class="text-graphite text-sm mb-4 leading-relaxed italic">
+                Enjeu&nbsp;: Piloter une refonte majeure sans rupture de service ou perte d'usage.
+            </p>
+            <p class="text-graphite text-base leading-relaxed mb-4">
+                Refonte profonde ou itération&nbsp;? La dette technique pousse à agir, mais le risque d’adoption inquiète. Le terrain rend ces risques lisibles et gérables.
+            </p>
+            <p class="text-ink font-medium text-sm border-l-2 border-flame pl-3">
+                Transformer un saut dans l'inconnu en une trajectoire maîtrisée.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- 6. NOS OFFRES -->
+<section class="border-t border-stone pt-20 mb-20">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-flame mb-4 block">Nos offres</span>
+            <h2 class="font-serif text-4xl text-ink mb-4">Trois niveaux de sécurité</h2>
+            <p class="text-graphite max-w-xl">
+                Selon la nature de la décision et le degré de complexité humaine et organisationnelle.
+            </p>
+        </div>
+        <a href="/offres" class="hidden md:inline-block text-graphite hover:text-flame transition-colors mb-2">
+            Voir le détail des offres →
+        </a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <a href="/offres/decision-eclairee" class="group block p-8 rounded-brand bg-white border border-stone hover:border-flame transition-colors duration-300">
+            <div class="w-3 h-3 rounded-full bg-[#E0553D] mb-6"></div>
+            <h3 class="font-serif text-2xl mb-4 text-ink group-hover:text-flame transition-colors">Décision éclairée</h3>
+            <p class="text-graphite text-sm leading-relaxed">
+                Aider à décider lorsque les enjeux sont stratégiques et que l’incertitude doit être levée par des preuves de terrain.
+            </p>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="/offres/alignement-strategique" class="group block p-8 rounded-brand bg-white border border-stone hover:border-flame transition-colors duration-300">
+            <div class="w-3 h-3 rounded-full bg-[#1A1A1A] mb-6"></div>
+            <h3 class="font-serif text-2xl mb-4 text-ink group-hover:text-flame transition-colors">Alignement stratégique</h3>
+            <p class="text-graphite text-sm leading-relaxed">
+                Créer les conditions d’une décision partagée et assumée au sein des instances de direction.
+            </p>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="/offres/evaluations-usage" class="group block p-8 rounded-brand bg-white border border-stone hover:border-flame transition-colors duration-300">
+            <div class="w-3 h-3 rounded-full bg-[#5F5F5F] mb-6"></div>
+            <h3 class="font-serif text-2xl mb-4 text-ink group-hover:text-flame transition-colors">Évaluations d’usage</h3>
+            <p class="text-graphite text-sm leading-relaxed">
+                Stress-tester vos produits existants ou futurs pour identifier les risques d'usage et sécuriser l'adoption.
+            </p>
+        </a>
+    </div>
+</section>
+
+<!-- Separator Heart -->
+<div class="flex justify-center mb-16 text-flame opacity-80">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+</div>
+
+<!-- 1B. LOGO WALL -->
+<section class="mb-24 text-center">
+    <span class="text-xs font-bold uppercase tracking-widest text-flame mb-12 block">Ils nous font confiance</span>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center opacity-70">
+        <!-- Logo List -->
+        
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-maif.png"
+                 srcset="/images/logos/logo-maif.png 1x, /images/logos/logo-maif@2x.png 2x"
+                 alt="Logo Maif"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-vallourec.png"
+                 srcset="/images/logos/logo-vallourec.png 1x, /images/logos/logo-vallourec@2x.png 2x"
+                 alt="Logo Vallourec"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-axa.png"
+                 srcset="/images/logos/logo-axa.png 1x, /images/logos/logo-axa@2x.png 2x"
+                 alt="Logo Axa"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-alan.png"
+                 srcset="/images/logos/logo-alan.png 1x, /images/logos/logo-alan@2x.png 2x"
+                 alt="Logo Alan"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-groupe-seb.png"
+                 srcset="/images/logos/logo-groupe-seb.png 1x, /images/logos/logo-groupe-seb@2x.png 2x"
+                 alt="Logo Groupe-seb"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-velux.png"
+                 srcset="/images/logos/logo-velux.png 1x, /images/logos/logo-velux@2x.png 2x"
+                 alt="Logo Velux"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-matmut.png"
+                 srcset="/images/logos/logo-matmut.png 1x, /images/logos/logo-matmut@2x.png 2x"
+                 alt="Logo Matmut"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-ag2r.png"
+                 srcset="/images/logos/logo-ag2r.png 1x, /images/logos/logo-ag2r@2x.png 2x"
+                 alt="Logo Ag2r"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-malakoff-mederic.png"
+                 srcset="/images/logos/logo-malakoff-mederic.png 1x, /images/logos/logo-malakoff-mederic@2x.png 2x"
+                 alt="Logo Malakoff-mederic"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-sikana.png"
+                 srcset="/images/logos/logo-sikana.png 1x, /images/logos/logo-sikana@2x.png 2x"
+                 alt="Logo Sikana"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-groupe-henner.png"
+                 srcset="/images/logos/logo-groupe-henner.png 1x, /images/logos/logo-groupe-henner@2x.png 2x"
+                 alt="Logo Groupe-henner"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-smart-tribune.png"
+                 srcset="/images/logos/logo-smart-tribune.png 1x, /images/logos/logo-smart-tribune@2x.png 2x"
+                 alt="Logo Smart-tribune"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-smice.png"
+                 srcset="/images/logos/logo-smice.png 1x, /images/logos/logo-smice@2x.png 2x"
+                 alt="Logo Smice"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+        <div class="w-24 h-12 relative flex items-center justify-center">
+            <img src="/images/logos/logo-welbees.png"
+                 srcset="/images/logos/logo-welbees.png 1x, /images/logos/logo-welbees@2x.png 2x"
+                 alt="Logo Welbees"
+                 class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+        </div>
+        
+    </div>
+</section>
+
+<!-- 7. ANCRAGES CONCRETS -->
+<section class="mb-24">
+    <span class="text-xs font-bold uppercase tracking-widest text-flame mb-8 block text-center md:text-left">Ancrages concrets</span>
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20">
+        <!-- MAIF -->
+        <div class="flex flex-col items-start">
+             <div class="h-12 mb-6 flex items-center">
+                <img src="/images/logos/logo-maif.png" 
+                     srcset="/images/logos/logo-maif.png 1x, /images/logos/logo-maif@2x.png 2x" 
+                     alt="Logo MAIF" 
+                     class="h-full w-auto object-contain" />
+             </div>
+
+             <h3 class="font-serif text-3xl text-ink mb-2">MAIF</h3>
+             <span class="text-xs font-bold uppercase tracking-wide text-graphite mb-6">Sécuriser l'existant à grande échelle</span>
+             
+             <div class="mb-6 space-y-4">
+                <p class="text-sm text-graphite"><strong class="text-ink">Défi Stratégique&nbsp;:</strong> Garantir la continuité de service d'un écosystème numérique utilisé par des millions de sociétaires lors de refontes critiques.</p>
+                <p class="text-sm text-graphite"><strong class="text-ink">Intervention&nbsp;:</strong> Tiers indépendant pour confronter les choix de conception à la réalité des usages via des protocoles d'évaluation rigoureux.</p>
+                <p class="text-sm text-graphite"><strong class="text-ink">Résultat Business&nbsp;:</strong> Sécurisation des lancements, réduction drastique des frictions post-déploiement et maintien de la préférence sociétaire.</p>
+             </div>
+        </div>
+        
+        <!-- VALLOUREC -->
+        <div class="flex flex-col items-start">
+             <div class="h-12 mb-6 flex items-center">
+                <img src="/images/logos/logo-vallourec.png" 
+                     srcset="/images/logos/logo-vallourec.png 1x, /images/logos/logo-vallourec@2x.png 2x"
+                     alt="Logo Vallourec" 
+                     class="h-full w-auto object-contain" />
+             </div>
+
+             <h3 class="font-serif text-3xl text-ink mb-2">VALLOUREC</h3>
+             <span class="text-xs font-bold uppercase tracking-wide text-graphite mb-6">Éclairer l'innovation amont</span>
+
+             <div class="mb-6 space-y-4">
+                <p class="text-sm text-graphite"><strong class="text-ink">Défi Stratégique&nbsp;:</strong> Réduire l'incertitude sur des cycles R&D longs et coûteux dans le secteur industriel.</p>
+                <p class="text-sm text-graphite"><strong class="text-ink">Intervention&nbsp;:</strong> Utilisation du prototype et du test de terrain comme outils de réflexion stratégique pour valider la valeur métier dès les premières phases.</p>
+                <p class="text-sm text-graphite"><strong class="text-ink">Résultat Business&nbsp;:</strong> Élimination précoce des fausses pistes d'innovation, permettant de concentrer les budgets sur les projets à haut potentiel.</p>
+             </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. FINAL CTA -->
+<section class="mb-20">
+    <div class="bg-ink rounded-brand p-12 md:p-24 text-center text-cream relative overflow-hidden">
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="font-serif text-4xl md:text-6xl mb-8 leading-tight">
+                Prêt à éclairer vos prochaines décisions&nbsp;?
+            </h2>
+            <p class="text-xl md:text-2xl text-stone font-light mb-12 opacity-90">
+                Commençons par un échange pour qualifier votre situation et vos enjeux de sécurité décisionnelle.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/contact" class="px-10 py-5 bg-flame text-cream text-lg font-bold rounded-brand hover:bg-opacity-90 transition-all shadow-xl tracking-wide">
+                    Parler de votre situation
+                </a>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-flame opacity-10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-stone opacity-5 rounded-full blur-3xl -ml-20 -mb-20"></div>
+    </div>
+</section>
+        </div>
+    </main>
+
+    <footer class="w-full px-6 py-12 md:py-20 border-t border-stone bg-cream mt-auto">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-5">
+            <h3 class="font-serif text-2xl mb-6">We Love Users</h3>
+            <p class="text-graphite text-lg leading-relaxed mb-8 max-w-sm">
+                Aider les organisations à décider avec justesse quand la situation est complexe.
+            </p>
+            <div class="flex flex-col gap-2 text-sm text-graphite">
+                <span>© 2026 We Love Users</span>
+                <a href="/mentions-legales" class="hover:text-flame transition-colors">Mentions légales</a>
+            </div>
+        </div>
+        
+        <div class="md:col-span-3 md:col-start-7">
+            <h4 class="font-medium text-ink mb-6">Navigation</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/" class="hover:text-flame transition-colors">Accueil</a></li>
+                <li><a href="/offres" class="hover:text-flame transition-colors">Nos offres</a></li>
+                <li><a href="/methode" class="hover:text-flame transition-colors">Comment nous travaillons</a></li>
+                <li><a href="/a-propos" class="hover:text-flame transition-colors">À propos</a></li>
+            </ul>
+        </div>
+
+        <div class="md:col-span-3">
+            <h4 class="font-medium text-ink mb-6">Contact</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/contact" class="hover:text-flame transition-colors underline decoration-1 underline-offset-4">Parler de votre situation</a></li>
+                <li>We Love Users,<br>2 avenue de Verdun,<br>31290 Villefranche de Lauragais</li>
+                <li><a href="https://www.linkedin.com/company/weloveusers/" target="_blank" rel="noopener noreferrer" class="hover:text-flame transition-colors">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Modal -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 p-4 md:p-6 bg-white border-t border-stone shadow-2xl z-50 hidden transform transition-transform duration-500 translate-y-full">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-graphite max-w-2xl">
+            <p><strong>Nous respectons votre vie privée.</strong> Nous utilisons des cookies pour analyser l'audience de notre site et améliorer votre expérience. Vous pouvez accepter ou refuser ces traceurs.</p>
+        </div>
+        <div class="flex gap-3 w-full md:w-auto">
+            <button onclick="handleConsent('denied')" class="flex-1 md:flex-none px-4 py-2 bg-cream border border-stone text-ink text-sm font-medium rounded-brand hover:bg-stone transition-colors whitespace-nowrap">
+                Tout refuser
+            </button>
+            <button onclick="handleConsent('granted')" class="flex-1 md:flex-none px-6 py-2 bg-ink text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                Tout accepter
+            </button>
+        </div>
+    </div>
+</div>
+    
+
+<!-- Main JS -->
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

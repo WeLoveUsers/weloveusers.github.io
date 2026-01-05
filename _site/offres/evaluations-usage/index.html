@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Évaluations d'usage | We Love Users</title>
+<meta name="description" content="Valider et ajuster des choix existants par l’usage réel.">
+
+<!-- Favicon (Heart) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E0553D'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+
+<!-- Fonts (CDN) -->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS (CDN) -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#FAF9F7',    // Fond principal (Eggshell)
+                    ink: '#1A1A1A',      // Noir profond (Uniformisé)
+                    graphite: '#5F5F5F', // Gris texte secondaire
+                    stone: '#E2E0DC',    // Gris UI / séparateurs
+                    flame: '#E0553D',    // Corail signature
+                },
+                fontFamily: {
+                    sans: ['Satoshi', 'sans-serif'],
+                    serif: ['Times New Roman', 'Times', 'Liberation Serif', 'serif'],
+                },
+                borderRadius: {
+                    'brand': '16px',
+                },
+                spacing: {
+                    '18': '4.5rem',
+                    '22': '5.5rem',
+                    '26': '6.5rem',
+                }
+            }
+        }
+    }
+</script> -->
+
+</head>
+<body class="flex flex-col min-h-screen font-sans">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-flame text-cream px-4 py-3 rounded-brand z-[60] font-medium shadow-xl ring-2 ring-white">
+        Aller au contenu principal
+    </a>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header class="w-full py-6 md:py-8 px-6 border-b border-stone sticky top-0 bg-[#FAF9F7]/95 backdrop-blur-sm z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="font-serif text-2xl tracking-tight font-medium hover:text-graphite transition-colors relative z-50">
+            We Love Users
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide items-center" aria-label="Navigation principale">
+            <a href="/" class="nav-link transition-colors ">Accueil</a>
+            <a href="/offres" class="nav-link transition-colors active">Nos Offres</a>
+            <a href="/methode" class="nav-link transition-colors ">Notre Méthode</a>
+            <a href="/a-propos" class="nav-link transition-colors ">À propos</a>
+            <span class="w-1 h-1 rounded-full bg-stone mx-1" aria-hidden="true"></span>
+            <a href="/analyses" class="nav-link transition-colors text-graphite ">Analyses</a>
+        </nav>
+
+        <a href="/contact" class="hidden md:inline-block px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+            Parler de votre situation
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-ink relative z-50 focus:outline-none p-2" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect id="burger-top" y="4" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+                <rect id="burger-middle" y="11" width="24" height="2" fill="currentColor" class="transition-opacity duration-300"/>
+                <rect id="burger-bottom" y="18" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-start pt-32 px-6 h-screen overflow-y-auto md:hidden" aria-hidden="true">
+        <nav class="flex flex-col gap-8 text-2xl font-serif text-ink items-center">
+            <a href="/" class="mobile-link hover:text-flame transition-colors">Accueil</a>
+            <a href="/offres" class="mobile-link hover:text-flame transition-colors">Nos Offres</a>
+            <a href="/methode" class="mobile-link hover:text-flame transition-colors">Notre Méthode</a>
+            <a href="/a-propos" class="mobile-link hover:text-flame transition-colors">À propos</a>
+            <a href="/analyses" class="mobile-link hover:text-flame transition-colors">Analyses</a>
+            <div class="w-12 border-t border-stone my-4" aria-hidden="true"></div>
+            <a href="/contact" class="w-full text-center px-8 py-4 bg-flame text-cream rounded-brand text-lg font-sans shadow-sm hover:bg-opacity-90 transition-all">Parler de votre situation</a>
+        </nav>
+        <div class="mt-auto pb-12 text-center text-sm text-graphite">
+            <p>© We Love Users</p>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow w-full px-6 focus:outline-none" tabindex="-1">
+        <div class="max-w-5xl mx-auto py-12 md:py-24">
+            <article>
+    <header class="mb-16 pt-10 border-b border-stone pb-12">
+        <div class="flex items-center gap-3 text-sm text-graphite mb-6">
+            <a href="/offres" class="hover:text-flame transition-colors">Nos Offres</a>
+            <span class="text-stone">/</span>
+            <span class="uppercase tracking-wider font-bold text-flame">Évaluations d’usage</span>
+        </div>
+
+        <h1 class="font-serif text-5xl md:text-6xl text-ink mb-6">Évaluations d’usage</h1>
+        <p class="text-xl md:text-2xl text-ink font-light leading-relaxed">
+            Valider et ajuster des choix existants par l’usage réel.
+        </p>
+    </header>
+
+    <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-8 prose-lg text-graphite font-light">
+            <p class="lead text-ink font-medium">
+                Tous les projets ne nécessitent pas une intervention stratégique lourde. Parfois, il s’agit simplement de stress-tester vos produits pour sécuriser l'adoption.
+            </p>
+            <p>
+                Entre ce qui est conçu, ce qui est imaginé et ce qui est réellement vécu, il existe toujours un écart. Les évaluations d’usage permettent de rendre cet écart visible pour agir avant qu'il ne détruise de la valeur.
+            </p>
+            
+            <blockquote class="my-10 pl-6 border-l-4 border-flame bg-cream py-4 pr-6 rounded-r-brand">
+                <p class="text-lg font-serif text-ink italic mb-2">
+                    "Sécuriser le processus d'innovation par le prototypage rapide et l'évaluation constante."
+                </p>
+                <footer class="text-sm font-bold text-graphite uppercase tracking-wide">— VALLOUREC</footer>
+            </blockquote>
+
+            <h3 class="font-serif text-2xl text-ink mt-12 mb-6">Quand faire appel à cette offre</h3>
+            <ul class="list-disc pl-5 space-y-2 mb-8 text-sm">
+                <li>Validation de la valeur métier d'une fonctionnalité.</li>
+                <li>Identification des causes de baisse de rétention (churn).</li>
+                <li>Objectivation des retours utilisateurs pour les équipes de conception.</li>
+                <li>Arbitrage entre plusieurs options tactiques de roadmap.</li>
+            </ul>
+
+            <h3 class="font-serif text-2xl text-ink mt-16 mb-8">Livrables&nbsp;: Votre assurance opérationnelle</h3>
+            <p>
+                Une évaluation d'usage livre des outils directement exploitables par vos équipes produit&nbsp;:
+            </p>
+            
+            <div class="grid sm:grid-cols-2 gap-6 my-10">
+                <div class="bg-white p-6 rounded-brand border border-stone shadow-sm">
+                    <span class="text-flame font-bold text-xs uppercase tracking-widest block mb-2">Outil Majeur</span>
+                    <h4 class="font-serif text-xl text-ink mb-3">Tableau d’Arbitrage Tactique</h4>
+                    <p class="text-xs text-graphite leading-relaxed">Un comparatif factuel entre vos différentes options basé sur l'usage constaté pour trancher rapidement.</p>
+                </div>
+                <div class="bg-white p-6 rounded-brand border border-stone shadow-sm">
+                    <span class="text-flame font-bold text-xs uppercase tracking-widest block mb-2">Outil Majeur</span>
+                    <h4 class="font-serif text-xl text-ink mb-3">Le "Carnet de Réalité"</h4>
+                    <p class="text-xs text-graphite leading-relaxed">Une sélection de preuves marquantes (verbatims, extraits vidéo) pour partager le constat sans filtre avec vos équipes.</p>
+                </div>
+            </div>
+
+            <p class="text-sm italic text-graphite">
+                Pas de théorie, mais une vision chirurgicale de ce qui fonctionne ou non, prête à être transmise à vos équipes de conception.
+            </p>
+        </div>
+
+        <aside class="md:col-span-4 space-y-8">
+            <div class="bg-white p-8 rounded-brand border border-stone sticky top-28">
+                <span class="text-xs font-bold uppercase tracking-widest text-flame mb-4 block">En résumé</span>
+                
+                <div class="space-y-6">
+                    <div>
+                        <span class="block text-sm text-graphite mb-1">Nature</span>
+                        <p class="text-ink font-medium">Opérationnelle / Tactique</p>
+                    </div>
+                    <div>
+                        <span class="block text-sm text-graphite mb-1">Durée</span>
+                        <p class="text-ink font-medium">Quelques semaines</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-stone">
+                    <a href="/contact" class="block w-full text-center px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-all duration-300">
+                        Parler de votre situation
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</article>
+        </div>
+    </main>
+
+    <footer class="w-full px-6 py-12 md:py-20 border-t border-stone bg-cream mt-auto">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-5">
+            <h3 class="font-serif text-2xl mb-6">We Love Users</h3>
+            <p class="text-graphite text-lg leading-relaxed mb-8 max-w-sm">
+                Aider les organisations à décider avec justesse quand la situation est complexe.
+            </p>
+            <div class="flex flex-col gap-2 text-sm text-graphite">
+                <span>© 2026 We Love Users</span>
+                <a href="/mentions-legales" class="hover:text-flame transition-colors">Mentions légales</a>
+            </div>
+        </div>
+        
+        <div class="md:col-span-3 md:col-start-7">
+            <h4 class="font-medium text-ink mb-6">Navigation</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/" class="hover:text-flame transition-colors">Accueil</a></li>
+                <li><a href="/offres" class="hover:text-flame transition-colors">Nos offres</a></li>
+                <li><a href="/methode" class="hover:text-flame transition-colors">Comment nous travaillons</a></li>
+                <li><a href="/a-propos" class="hover:text-flame transition-colors">À propos</a></li>
+            </ul>
+        </div>
+
+        <div class="md:col-span-3">
+            <h4 class="font-medium text-ink mb-6">Contact</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/contact" class="hover:text-flame transition-colors underline decoration-1 underline-offset-4">Parler de votre situation</a></li>
+                <li>We Love Users,<br>2 avenue de Verdun,<br>31290 Villefranche de Lauragais</li>
+                <li><a href="https://www.linkedin.com/company/weloveusers/" target="_blank" rel="noopener noreferrer" class="hover:text-flame transition-colors">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Modal -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 p-4 md:p-6 bg-white border-t border-stone shadow-2xl z-50 hidden transform transition-transform duration-500 translate-y-full">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-graphite max-w-2xl">
+            <p><strong>Nous respectons votre vie privée.</strong> Nous utilisons des cookies pour analyser l'audience de notre site et améliorer votre expérience. Vous pouvez accepter ou refuser ces traceurs.</p>
+        </div>
+        <div class="flex gap-3 w-full md:w-auto">
+            <button onclick="handleConsent('denied')" class="flex-1 md:flex-none px-4 py-2 bg-cream border border-stone text-ink text-sm font-medium rounded-brand hover:bg-stone transition-colors whitespace-nowrap">
+                Tout refuser
+            </button>
+            <button onclick="handleConsent('granted')" class="flex-1 md:flex-none px-6 py-2 bg-ink text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                Tout accepter
+            </button>
+        </div>
+    </div>
+</div>
+    
+
+<!-- Main JS -->
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

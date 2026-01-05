@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Offres | We Love Users</title>
+<meta name="description" content="Trois niveaux d'intervention : Évaluation, Décision, Alignement.">
+
+<!-- Favicon (Heart) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E0553D'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+
+<!-- Fonts (CDN) -->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS (CDN) -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#FAF9F7',    // Fond principal (Eggshell)
+                    ink: '#1A1A1A',      // Noir profond (Uniformisé)
+                    graphite: '#5F5F5F', // Gris texte secondaire
+                    stone: '#E2E0DC',    // Gris UI / séparateurs
+                    flame: '#E0553D',    // Corail signature
+                },
+                fontFamily: {
+                    sans: ['Satoshi', 'sans-serif'],
+                    serif: ['Times New Roman', 'Times', 'Liberation Serif', 'serif'],
+                },
+                borderRadius: {
+                    'brand': '16px',
+                },
+                spacing: {
+                    '18': '4.5rem',
+                    '22': '5.5rem',
+                    '26': '6.5rem',
+                }
+            }
+        }
+    }
+</script> -->
+
+</head>
+<body class="flex flex-col min-h-screen font-sans">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-flame text-cream px-4 py-3 rounded-brand z-[60] font-medium shadow-xl ring-2 ring-white">
+        Aller au contenu principal
+    </a>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header class="w-full py-6 md:py-8 px-6 border-b border-stone sticky top-0 bg-[#FAF9F7]/95 backdrop-blur-sm z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="font-serif text-2xl tracking-tight font-medium hover:text-graphite transition-colors relative z-50">
+            We Love Users
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide items-center" aria-label="Navigation principale">
+            <a href="/" class="nav-link transition-colors ">Accueil</a>
+            <a href="/offres" class="nav-link transition-colors active">Nos Offres</a>
+            <a href="/methode" class="nav-link transition-colors ">Notre Méthode</a>
+            <a href="/a-propos" class="nav-link transition-colors ">À propos</a>
+            <span class="w-1 h-1 rounded-full bg-stone mx-1" aria-hidden="true"></span>
+            <a href="/analyses" class="nav-link transition-colors text-graphite ">Analyses</a>
+        </nav>
+
+        <a href="/contact" class="hidden md:inline-block px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+            Parler de votre situation
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-ink relative z-50 focus:outline-none p-2" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect id="burger-top" y="4" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+                <rect id="burger-middle" y="11" width="24" height="2" fill="currentColor" class="transition-opacity duration-300"/>
+                <rect id="burger-bottom" y="18" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-start pt-32 px-6 h-screen overflow-y-auto md:hidden" aria-hidden="true">
+        <nav class="flex flex-col gap-8 text-2xl font-serif text-ink items-center">
+            <a href="/" class="mobile-link hover:text-flame transition-colors">Accueil</a>
+            <a href="/offres" class="mobile-link hover:text-flame transition-colors">Nos Offres</a>
+            <a href="/methode" class="mobile-link hover:text-flame transition-colors">Notre Méthode</a>
+            <a href="/a-propos" class="mobile-link hover:text-flame transition-colors">À propos</a>
+            <a href="/analyses" class="mobile-link hover:text-flame transition-colors">Analyses</a>
+            <div class="w-12 border-t border-stone my-4" aria-hidden="true"></div>
+            <a href="/contact" class="w-full text-center px-8 py-4 bg-flame text-cream rounded-brand text-lg font-sans shadow-sm hover:bg-opacity-90 transition-all">Parler de votre situation</a>
+        </nav>
+        <div class="mt-auto pb-12 text-center text-sm text-graphite">
+            <p>© We Love Users</p>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow w-full px-6 focus:outline-none" tabindex="-1">
+        <div class="max-w-5xl mx-auto py-12 md:py-24">
+            <section class="mb-20">
+    <h1 class="font-serif text-5xl md:text-6xl text-ink mb-8">Nos offres</h1>
+    <p class="text-xl text-graphite max-w-2xl leading-relaxed">
+        Selon la situation, le besoin n’est pas le même&nbsp;: valider un choix existant, aligner des acteurs clés, ou sécuriser une décision stratégique engageante.
+    </p>
+</section>
+
+<div class="space-y-24">
+    
+    <!-- Offre 1 (Focus) -->
+    <section class="grid md:grid-cols-12 gap-12 border-t border-stone pt-16">
+        <div class="md:col-span-4">
+            <h2 class="font-serif text-3xl text-ink mb-4">Décision éclairée</h2>
+            <span class="inline-block px-3 py-1 bg-ink text-cream text-xs font-medium rounded-full mb-6">Offre Cœur</span>
+            <p class="text-graphite mb-8">
+                Sécuriser une décision stratégique par la réalité humaine.
+            </p>
+            <a href="/offres/decision-eclairee" class="inline-flex items-center text-flame font-medium hover:underline">
+                Découvrir l'offre
+            </a>
+        </div>
+        <div class="md:col-span-8 bg-white p-8 md:p-12 rounded-brand border border-stone">
+            <h3 class="text-lg font-bold mb-6">Quand cette offre est pertinente</h3>
+            <ul class="space-y-3 text-graphite mb-8">
+                <li class="flex items-start"><span class="mr-3 text-flame">•</span>Avant un investissement majeur ou un lancement sensible.</li>
+                <li class="flex items-start"><span class="mr-3 text-flame">•</span>Avant une refonte structurante.</li>
+                <li class="flex items-start"><span class="mr-3 text-flame">•</span>Lorsque les indicateurs sont bons, mais que le doute persiste.</li>
+                <li class="flex items-start"><span class="mr-3 text-flame">•</span>Lorsque la décision est difficilement réversible.</li>
+            </ul>
+            <div class="pt-6 border-t border-stone flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div class="text-sm text-graphite">
+                    <span class="block font-bold text-ink">Durée</span>
+                    2 à 5 mois
+                </div>
+                <div class="text-sm text-graphite">
+                    <span class="block font-bold text-ink">Nature</span>
+                    Stratégique, décisionnelle
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offre 2 -->
+    <section class="grid md:grid-cols-12 gap-12 border-t border-stone pt-16">
+        <div class="md:col-span-4">
+            <h2 class="font-serif text-3xl text-ink mb-4">Alignement stratégique</h2>
+            <p class="text-graphite mb-8">
+                Créer les conditions d’une décision partagée et assumée.
+            </p>
+            <a href="/offres/alignement-strategique" class="inline-flex items-center text-flame font-medium hover:underline">
+                Découvrir l'offre
+            </a>
+        </div>
+        <div class="md:col-span-8 bg-white p-8 md:p-12 rounded-brand border border-stone">
+            <h3 class="text-lg font-bold mb-6">L'enjeu</h3>
+            <p class="text-graphite mb-6">
+                Intervient lorsque le blocage est avant tout organisationnel&nbsp;: désaccords internes, lectures divergentes de la situation. L'enjeu n'est pas de décider à la place des équipes, mais de créer les conditions d'une décision collective.
+            </p>
+            <div class="pt-6 border-t border-stone flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div class="text-sm text-graphite">
+                    <span class="block font-bold text-ink">Durée</span>
+                    1 à 3 mois
+                </div>
+                <div class="text-sm text-graphite">
+                    <span class="block font-bold text-ink">Nature</span>
+                    Organisationnelle, collective
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offre 3 -->
+    <section class="grid md:grid-cols-12 gap-12 border-t border-stone pt-16">
+        <div class="md:col-span-4">
+            <h2 class="font-serif text-3xl text-ink mb-4">Évaluations d’usage</h2>
+            <p class="text-graphite mb-8">
+                Valider et ajuster des choix existants par l’usage réel.
+            </p>
+            <a href="/offres/evaluations-usage" class="inline-flex items-center text-flame font-medium hover:underline">
+                Découvrir l'offre
+            </a>
+        </div>
+        <div class="md:col-span-8 bg-white p-8 md:p-12 rounded-brand border border-stone">
+            <h3 class="text-lg font-bold mb-6">L'approche</h3>
+            <p class="text-graphite mb-6">
+                Permet de confronter un produit ou service existant à l'expérience réelle pour identifier les frictions. Offre socle pour rassurer sur le terrain et le concret.
+            </p>
+            <div class="pt-6 border-t border-stone flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div class="text-sm text-graphite">
+                    <span class="block font-bold text-ink">Durée</span>
+                    Quelques semaines
+                </div>
+                <div class="text-sm text-graphite">
+                    <span class="block font-bold text-ink">Nature</span>
+                    Opérationnelle, ciblée
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. STRATEGIC FAQ -->
+    <section class="border-t border-stone pt-20">
+        <h2 class="font-serif text-3xl md:text-4xl text-ink mb-12 text-center md:text-left">Questions fréquentes</h2>
+        
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-12">
+            <!-- Q1 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-ink leading-tight">Pourquoi faire appel à un tiers indépendant plutôt qu'à une agence UX&nbsp;?</h3>
+                <p class="text-graphite text-base leading-relaxed">
+                    Une agence a souvent pour objectif de produire des écrans. Mon rôle est différent&nbsp;: je n'ai rien à vous vendre à part la vérité du terrain. Mon indépendance garantit une neutralité totale dans l'analyse, indispensable pour des arbitrages stratégiques non biaisés.
+                </p>
+            </div>
+            
+            <!-- Q2 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-ink leading-tight">Vos offres semblent plus chères qu'une prestation de tests classiques. Pourquoi&nbsp;?</h3>
+                <p class="text-graphite text-base leading-relaxed">
+                    Les tests classiques livrent des insights ergonomiques. Mes interventions livrent des outils de décision. Le coût d'une mauvaise décision stratégique se chiffre souvent en centaines de milliers d'euros. Mon travail sécurise ces investissements.
+                </p>
+            </div>
+            
+            <!-- Q3 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-ink leading-tight">Nous avons déjà beaucoup de data (Analytics, CRM). Qu'apportez-vous de plus&nbsp;?</h3>
+                <p class="text-graphite text-base leading-relaxed">
+                    La data vous dit ce qui se passe, le terrain vous dit pourquoi. Je comble l'angle mort entre vos chiffres et la réalité humaine pour transformer vos données froides en convictions actionnables.
+                </p>
+            </div>
+            
+            <!-- Q4 -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-ink leading-tight">Combien de temps faut-il pour obtenir des résultats&nbsp;?</h3>
+                <p class="text-graphite text-base leading-relaxed">
+                    Selon la complexité, une mission dure de quelques semaines à quelques mois. Cependant, les premiers signaux de terrain apparaissent dès les 15 premiers jours et permettent de réorienter les discussions internes immédiatement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation aide -->
+    <section class="mt-24 py-12 bg-white rounded-brand border border-stone text-center px-6">
+        <h3 class="font-serif text-2xl text-ink mb-4">Vous hésitez sur l’approche la plus pertinente&nbsp;?</h3>
+        <p class="text-graphite mb-8 max-w-xl mx-auto">
+            Toutes les situations ne se ressemblent pas. Nous vous aidons à qualifier votre situation avant de vous proposer une intervention adaptée.
+        </p>
+        <a href="/contact" class="inline-flex justify-center items-center px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+            Parler de votre situation
+        </a>
+    </section>
+
+</div>
+        </div>
+    </main>
+
+    <footer class="w-full px-6 py-12 md:py-20 border-t border-stone bg-cream mt-auto">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-5">
+            <h3 class="font-serif text-2xl mb-6">We Love Users</h3>
+            <p class="text-graphite text-lg leading-relaxed mb-8 max-w-sm">
+                Aider les organisations à décider avec justesse quand la situation est complexe.
+            </p>
+            <div class="flex flex-col gap-2 text-sm text-graphite">
+                <span>© 2026 We Love Users</span>
+                <a href="/mentions-legales" class="hover:text-flame transition-colors">Mentions légales</a>
+            </div>
+        </div>
+        
+        <div class="md:col-span-3 md:col-start-7">
+            <h4 class="font-medium text-ink mb-6">Navigation</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/" class="hover:text-flame transition-colors">Accueil</a></li>
+                <li><a href="/offres" class="hover:text-flame transition-colors">Nos offres</a></li>
+                <li><a href="/methode" class="hover:text-flame transition-colors">Comment nous travaillons</a></li>
+                <li><a href="/a-propos" class="hover:text-flame transition-colors">À propos</a></li>
+            </ul>
+        </div>
+
+        <div class="md:col-span-3">
+            <h4 class="font-medium text-ink mb-6">Contact</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/contact" class="hover:text-flame transition-colors underline decoration-1 underline-offset-4">Parler de votre situation</a></li>
+                <li>We Love Users,<br>2 avenue de Verdun,<br>31290 Villefranche de Lauragais</li>
+                <li><a href="https://www.linkedin.com/company/weloveusers/" target="_blank" rel="noopener noreferrer" class="hover:text-flame transition-colors">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Modal -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 p-4 md:p-6 bg-white border-t border-stone shadow-2xl z-50 hidden transform transition-transform duration-500 translate-y-full">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-graphite max-w-2xl">
+            <p><strong>Nous respectons votre vie privée.</strong> Nous utilisons des cookies pour analyser l'audience de notre site et améliorer votre expérience. Vous pouvez accepter ou refuser ces traceurs.</p>
+        </div>
+        <div class="flex gap-3 w-full md:w-auto">
+            <button onclick="handleConsent('denied')" class="flex-1 md:flex-none px-4 py-2 bg-cream border border-stone text-ink text-sm font-medium rounded-brand hover:bg-stone transition-colors whitespace-nowrap">
+                Tout refuser
+            </button>
+            <button onclick="handleConsent('granted')" class="flex-1 md:flex-none px-6 py-2 bg-ink text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                Tout accepter
+            </button>
+        </div>
+    </div>
+</div>
+    
+
+<!-- Main JS -->
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

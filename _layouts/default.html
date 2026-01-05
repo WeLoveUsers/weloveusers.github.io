@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
+<head>
+    {% include head.html %}
+</head>
+<body class="flex flex-col min-h-screen font-sans">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-flame text-cream px-4 py-3 rounded-brand z-[60] font-medium shadow-xl ring-2 ring-white">
+        Aller au contenu principal
+    </a>
+    
+    {% include noscript.html %}
+    {% include header.html %}
 
-  {% include head.html %}
-
-  <body class="{{ page.section }} {{ page.subsection }}">
-
-    <div class="ui top container">
-      <div class="site-nav-container">
-        {% include nav.site.html %}
-      </div>
-    </div>
-
-    <div class="ui main container">
-      {{ content }}
-    </div>
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow w-full px-6 focus:outline-none" tabindex="-1">
+        <div class="max-w-5xl mx-auto py-12 md:py-24">
+            {{ content }}
+        </div>
+    </main>
 
     {% include footer.html %}
-
-    {% include nav.site.mobile.html %}
-
     {% include scripts.html %}
-  </body>
 
+</body>
 </html>

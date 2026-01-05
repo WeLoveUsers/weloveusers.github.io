@@ -1,0 +1,12 @@
+<header class="w-full py-6 md:py-8 px-6 border-b border-stone sticky top-0 bg-[#FAF9F7]/95 backdrop-blur-sm z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+        <a href="/" class="font-serif text-2xl tracking-tight font-medium hover:text-graphite transition-colors relative z-50">
+            We Love Users <span class="text-xs font-sans text-flame ml-2 font-bold uppercase tracking-widest align-middle border border-flame px-2 py-0.5 rounded-full">Interne</span>
+        </a>
+        
+        <nav class="flex gap-8 text-sm font-medium tracking-wide items-center">
+            <a href="/interne/" class="nav-link transition-colors text-ink hover:text-flame {% if page.url == '/interne/' %}font-bold text-flame{% endif %}">Design System</a>
+            <a href="/interne/slides" class="nav-link transition-colors text-ink hover:text-flame {% if page.url contains 'slides' %}font-bold text-flame{% endif %}">Slides</a>
+        </nav>
+    </div>
+</header>

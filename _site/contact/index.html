@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parler de votre situation | We Love Users</title>
+<meta name="description" content="Échange sans engagement pour comprendre votre contexte et vos enjeux de décision.">
+
+<!-- Favicon (Heart) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E0553D'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+
+<!-- Fonts (CDN) -->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS (CDN) -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#FAF9F7',    // Fond principal (Eggshell)
+                    ink: '#1A1A1A',      // Noir profond (Uniformisé)
+                    graphite: '#5F5F5F', // Gris texte secondaire
+                    stone: '#E2E0DC',    // Gris UI / séparateurs
+                    flame: '#E0553D',    // Corail signature
+                },
+                fontFamily: {
+                    sans: ['Satoshi', 'sans-serif'],
+                    serif: ['Times New Roman', 'Times', 'Liberation Serif', 'serif'],
+                },
+                borderRadius: {
+                    'brand': '16px',
+                },
+                spacing: {
+                    '18': '4.5rem',
+                    '22': '5.5rem',
+                    '26': '6.5rem',
+                }
+            }
+        }
+    }
+</script> -->
+
+</head>
+<body class="flex flex-col min-h-screen font-sans">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-flame text-cream px-4 py-3 rounded-brand z-[60] font-medium shadow-xl ring-2 ring-white">
+        Aller au contenu principal
+    </a>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header class="w-full py-6 md:py-8 px-6 border-b border-stone sticky top-0 bg-[#FAF9F7]/95 backdrop-blur-sm z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="font-serif text-2xl tracking-tight font-medium hover:text-graphite transition-colors relative z-50">
+            We Love Users
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide items-center" aria-label="Navigation principale">
+            <a href="/" class="nav-link transition-colors ">Accueil</a>
+            <a href="/offres" class="nav-link transition-colors ">Nos Offres</a>
+            <a href="/methode" class="nav-link transition-colors ">Notre Méthode</a>
+            <a href="/a-propos" class="nav-link transition-colors ">À propos</a>
+            <span class="w-1 h-1 rounded-full bg-stone mx-1" aria-hidden="true"></span>
+            <a href="/analyses" class="nav-link transition-colors text-graphite ">Analyses</a>
+        </nav>
+
+        <a href="/contact" class="hidden md:inline-block px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+            Parler de votre situation
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-ink relative z-50 focus:outline-none p-2" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect id="burger-top" y="4" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+                <rect id="burger-middle" y="11" width="24" height="2" fill="currentColor" class="transition-opacity duration-300"/>
+                <rect id="burger-bottom" y="18" width="24" height="2" fill="currentColor" class="transition-transform duration-300 origin-center"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-start pt-32 px-6 h-screen overflow-y-auto md:hidden" aria-hidden="true">
+        <nav class="flex flex-col gap-8 text-2xl font-serif text-ink items-center">
+            <a href="/" class="mobile-link hover:text-flame transition-colors">Accueil</a>
+            <a href="/offres" class="mobile-link hover:text-flame transition-colors">Nos Offres</a>
+            <a href="/methode" class="mobile-link hover:text-flame transition-colors">Notre Méthode</a>
+            <a href="/a-propos" class="mobile-link hover:text-flame transition-colors">À propos</a>
+            <a href="/analyses" class="mobile-link hover:text-flame transition-colors">Analyses</a>
+            <div class="w-12 border-t border-stone my-4" aria-hidden="true"></div>
+            <a href="/contact" class="w-full text-center px-8 py-4 bg-flame text-cream rounded-brand text-lg font-sans shadow-sm hover:bg-opacity-90 transition-all">Parler de votre situation</a>
+        </nav>
+        <div class="mt-auto pb-12 text-center text-sm text-graphite">
+            <p>© We Love Users</p>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow w-full px-6 focus:outline-none" tabindex="-1">
+        <div class="max-w-5xl mx-auto py-12 md:py-24">
+            <section class="max-w-2xl mx-auto py-12">
+    <h1 class="font-serif text-5xl md:text-6xl text-ink mb-8">Parler de votre situation</h1>
+    
+    <div class="prose-lg text-graphite mb-12">
+        <p class="lead text-ink font-medium">
+            Chaque situation est différente.
+        </p>
+        <p>
+            Avant de proposer une intervention, nous prenons le temps de comprendre votre contexte, vos enjeux et ce qui rend la décision complexe.
+        </p>
+        <p>
+            Le premier échange sert uniquement à comprendre si et comment nous pouvons être utiles.
+        </p>
+        <p>
+            Cet échange est sans engagement.
+        </p>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="bg-white p-8 md:p-10 rounded-brand border border-stone shadow-sm">
+        <form id="contact-form" action="https://hook.eu1.make.com/wdufie9tbezwabifln5t1dvr2c1ht7oq" method="POST" class="space-y-6">
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                    <label for="name" class="block text-sm font-medium text-ink">Prénom / Nom</label>
+                    <input type="text" id="name" name="name" required 
+                           class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50">
+                </div>
+                
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-medium text-ink">Email professionnel</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50">
+                </div>
+            </div>
+
+            <!-- HONEYPOT (Anti-Spam) : Invisible pour les humains -->
+            <div class="opacity-0 absolute top-0 left-0 h-0 w-0 overflow-hidden z-[-1]" aria-hidden="true">
+                <label for="professional_website">Site Web (Ne pas remplir)</label>
+                <input type="text" id="professional_website" name="professional_website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                    <label for="role" class="block text-sm font-medium text-ink">Rôle / Fonction</label>
+                    <input type="text" id="role" name="role" placeholder="ex&nbsp;: CPO, Head of Product..." 
+                           class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50">
+                </div>
+
+                <div class="space-y-2">
+                    <label for="urgency" class="block text-sm font-medium text-ink">Degré d'urgence</label>
+                    <div class="relative">
+                        <select id="urgency" name="urgency"
+                               class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink appearance-none cursor-pointer">
+                            <option value="Normal">Normal (Exploratoire)</option>
+                            <option value="Important">Important (Dès que possible)</option>
+                            <option value="Critique">Critique (Bloquant)</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-ink">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label for="message" class="block text-sm font-medium text-ink">Votre message</label>
+                <textarea id="message" name="message" rows="5" required
+                          placeholder="Décrivez brièvement votre situation, votre question ou ce qui vous amène."
+                          class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50 resize-none"></textarea>
+            </div>
+
+            <div class="pt-4">
+                <button type="submit" class="w-full md:w-auto px-8 py-4 bg-flame text-cream text-base font-bold rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm flex justify-center items-center tracking-wide">
+                    Envoyer ma demande
+                </button>
+            </div>
+
+        </form>
+
+        <p class="mt-8 text-sm text-graphite text-center md:text-left border-t border-stone pt-6">
+            Nous répondons personnellement et privilégions un premier échange court (environ 30 minutes) pour qualifier la situation.
+        </p>
+    </div>
+</section>
+        </div>
+    </main>
+
+    <footer class="w-full px-6 py-12 md:py-20 border-t border-stone bg-cream mt-auto">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-5">
+            <h3 class="font-serif text-2xl mb-6">We Love Users</h3>
+            <p class="text-graphite text-lg leading-relaxed mb-8 max-w-sm">
+                Aider les organisations à décider avec justesse quand la situation est complexe.
+            </p>
+            <div class="flex flex-col gap-2 text-sm text-graphite">
+                <span>© 2026 We Love Users</span>
+                <a href="/mentions-legales" class="hover:text-flame transition-colors">Mentions légales</a>
+            </div>
+        </div>
+        
+        <div class="md:col-span-3 md:col-start-7">
+            <h4 class="font-medium text-ink mb-6">Navigation</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/" class="hover:text-flame transition-colors">Accueil</a></li>
+                <li><a href="/offres" class="hover:text-flame transition-colors">Nos offres</a></li>
+                <li><a href="/methode" class="hover:text-flame transition-colors">Comment nous travaillons</a></li>
+                <li><a href="/a-propos" class="hover:text-flame transition-colors">À propos</a></li>
+            </ul>
+        </div>
+
+        <div class="md:col-span-3">
+            <h4 class="font-medium text-ink mb-6">Contact</h4>
+            <ul class="space-y-3 text-graphite">
+                <li><a href="/contact" class="hover:text-flame transition-colors underline decoration-1 underline-offset-4">Parler de votre situation</a></li>
+                <li>We Love Users,<br>2 avenue de Verdun,<br>31290 Villefranche de Lauragais</li>
+                <li><a href="https://www.linkedin.com/company/weloveusers/" target="_blank" rel="noopener noreferrer" class="hover:text-flame transition-colors">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Modal -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 p-4 md:p-6 bg-white border-t border-stone shadow-2xl z-50 hidden transform transition-transform duration-500 translate-y-full">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-graphite max-w-2xl">
+            <p><strong>Nous respectons votre vie privée.</strong> Nous utilisons des cookies pour analyser l'audience de notre site et améliorer votre expérience. Vous pouvez accepter ou refuser ces traceurs.</p>
+        </div>
+        <div class="flex gap-3 w-full md:w-auto">
+            <button onclick="handleConsent('denied')" class="flex-1 md:flex-none px-4 py-2 bg-cream border border-stone text-ink text-sm font-medium rounded-brand hover:bg-stone transition-colors whitespace-nowrap">
+                Tout refuser
+            </button>
+            <button onclick="handleConsent('granted')" class="flex-1 md:flex-none px-6 py-2 bg-ink text-cream text-sm font-medium rounded-brand hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                Tout accepter
+            </button>
+        </div>
+    </div>
+</div>
+    
+
+<!-- Main JS -->
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
