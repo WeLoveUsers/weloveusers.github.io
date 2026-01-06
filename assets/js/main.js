@@ -114,8 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
             
             try {
+                // Ajout de l'API Key dans les headers
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
+                    headers: {
+                        'x-make-apikey': 'wlu-secure-contact-2026'
+                    },
                     body: formData
                 });
 
