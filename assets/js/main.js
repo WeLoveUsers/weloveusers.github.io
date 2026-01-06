@@ -113,6 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(contactForm);
             
+            // Suppression du champ honeypot pour ne pas polluer l'envoi vers Make
+            formData.delete('professional_website');
+            
             try {
                 // Ajout de l'API Key dans les headers
                 const response = await fetch(contactForm.action, {
