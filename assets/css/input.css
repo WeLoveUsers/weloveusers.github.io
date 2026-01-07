@@ -12,6 +12,18 @@
   --color-stone: #E2E0DC;
   --color-flame: #E0553D;
 
+  /* Nuances Utilitaires (Slides & UI) */
+  --color-taupe: #A8A29E;  /* Contraste moyen sur fond clair */
+  --color-grey: #9CA3AF;   /* Texte secondaire sur fond sombre */
+  --color-wash: #FFF1F2;   /* Fond highlight très pâle (teinté Flame) */
+  --color-rose: #FFE4E6;   /* Texte clair sur fond Flame */
+
+  /* Palette Sévérité (Audit) */
+  --color-sage: #4A7C59;   /* Positif / Validé (Vert végétal) */
+  --color-ochre: #D9A521;  /* Mineur (Jaune moutarde/Doré) */
+  /* Majeur utilise Flame (#E0553D) */
+  --color-berry: #9E2A2B;  /* Critique (Rouge sombre/Bordeaux) */
+
   /* Typographie */
   --font-sans: Satoshi, sans-serif;
   --font-serif: "Times New Roman", Times, "Liberation Serif", serif;
