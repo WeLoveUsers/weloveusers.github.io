@@ -73,6 +73,63 @@
     .prose-lg p {
         margin-bottom: 1.5em;
     }
+
+    /* Shared primitives */
+    .skip-link {
+        @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-flame text-cream px-4 py-3 rounded-brand z-[60] font-medium shadow-xl ring-2 ring-white;
+    }
+
+    .btn-primary {
+        @apply inline-flex justify-center items-center px-8 py-4 bg-flame text-cream text-base font-bold rounded-brand hover:opacity-90 transition-all duration-300 shadow-sm tracking-wide;
+    }
+
+    .btn-primary-sm {
+        @apply inline-flex justify-center items-center px-6 py-3 bg-flame text-cream text-sm font-medium rounded-brand hover:opacity-90 transition-all duration-300 shadow-sm tracking-wide;
+    }
+
+    .btn-secondary {
+        @apply inline-flex justify-center items-center px-8 py-4 bg-transparent border border-stone text-ink text-base font-bold rounded-brand hover:border-ink transition-all duration-300 tracking-wide;
+    }
+
+    .field-input {
+        @apply w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50;
+    }
+
+    .field-select {
+        @apply w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink appearance-none cursor-pointer;
+    }
+
+    .field-textarea {
+        @apply w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50 resize-none;
+    }
+
+    .badge-severity {
+        @apply px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest;
+    }
+
+    .badge-severity-sage {
+        @apply border border-sage text-sage bg-white;
+    }
+
+    .badge-severity-ochre {
+        @apply border border-ochre text-ochre bg-white;
+    }
+
+    .badge-severity-flame {
+        @apply bg-flame text-white shadow-sm;
+    }
+
+    .badge-severity-berry {
+        @apply bg-berry text-white shadow-sm;
+    }
+
+    .feedback-success-icon {
+        @apply w-16 h-16 bg-sage/20 text-sage rounded-full flex items-center justify-center mx-auto mb-6 ring-1 ring-sage/30;
+    }
+
+    .bg-texture-carbon {
+        background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+    }
     
     /* Navigation Styles */
     .nav-link {

@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const showSuccess = () => {
                 contactForm.innerHTML = `
                     <div class="text-center py-12 animate-fade-in">
-                        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="feedback-success-icon">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <h3 class="font-serif text-3xl text-ink mb-3">Message envoyé</h3>

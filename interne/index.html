@@ -235,14 +235,14 @@ sitemap: false
         <div class="space-y-8">
             <div>
                 <span class="text-xs text-graphite mb-4 block">Bouton Primaire (CTA Principal)</span>
-                <a href="#" class="inline-flex justify-center items-center px-8 py-4 bg-flame text-cream text-base font-bold rounded-brand hover:bg-opacity-90 transition-all duration-300 shadow-sm tracking-wide">
+                <a href="#" class="btn-primary">
                     Parler de votre situation
                 </a>
             </div>
             
             <div>
                 <span class="text-xs text-graphite mb-4 block">Bouton Secondaire (Ghost)</span>
-                <a href="#" class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-stone text-ink text-base font-bold rounded-brand hover:border-ink transition-all duration-300 tracking-wide">
+                <a href="#" class="btn-secondary">
                     Découvrir nos offres
                 </a>
             </div>
@@ -342,13 +342,11 @@ sitemap: false
         <form class="space-y-6">
             <div class="space-y-2">
                 <label class="block text-sm font-medium text-ink">Label du champ</label>
-                <input type="text" placeholder="Placeholder text..." 
-                       class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50">
+                <input type="text" placeholder="Placeholder text..." class="field-input">
             </div>
              <div class="space-y-2">
                 <label class="block text-sm font-medium text-ink">Zone de texte</label>
-                <textarea rows="3" placeholder="Saisissez votre message..."
-                          class="w-full px-4 py-3 rounded-lg border border-stone bg-cream focus:bg-white focus:border-flame focus:ring-1 focus:ring-flame outline-none transition-colors text-ink placeholder-graphite/50 resize-none"></textarea>
+                <textarea rows="3" placeholder="Saisissez votre message..." class="field-textarea"></textarea>
             </div>
             <div class="space-y-2">
                 <label class="block text-sm font-medium text-ink">Champ en focus</label>
@@ -357,4 +355,73 @@ sitemap: false
             </div>
         </form>
     </div>
+</section>
+
+<!-- 6. PATTERNS GLOBAUX -->
+<section class="mb-24 border-t border-stone pt-16">
+    <h2 class="font-serif text-3xl text-ink mb-10 flex items-center gap-4">
+        <span class="text-stone font-sans text-xl font-bold">06.</span> Patterns Globaux
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-4">
+            <span class="text-xs text-graphite block">Badges de sévérité (Audit)</span>
+            <div class="bg-white p-8 rounded-brand border border-stone space-y-4">
+                <div class="flex flex-wrap gap-3">
+                    <span class="badge-severity badge-severity-sage">Validé</span>
+                    <span class="badge-severity badge-severity-ochre">Mineur</span>
+                    <span class="badge-severity badge-severity-flame">Majeur</span>
+                    <span class="badge-severity badge-severity-berry">Critique</span>
+                </div>
+                <p class="text-sm text-graphite">Utiliser ces variantes pour toutes les fiches d'audit et les synthèses.</p>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <span class="text-xs text-graphite block">État de succès (Formulaire)</span>
+            <div class="bg-white p-8 rounded-brand border border-stone text-center">
+                <div class="feedback-success-icon">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="font-serif text-2xl text-ink mb-2">Message envoyé</h3>
+                <p class="text-sm text-graphite">Composant de confirmation aligné sur la palette WLU.</p>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <span class="text-xs text-graphite block">Bannière Cookies</span>
+            <div class="bg-white p-6 rounded-brand border border-stone shadow-sm space-y-4">
+                <p class="text-sm text-graphite"><strong class="text-ink">Nous respectons votre vie privée.</strong> Nous utilisons des cookies pour analyser l'audience.</p>
+                <div class="flex gap-3">
+                    <button class="px-4 py-2 bg-cream border border-stone text-ink text-sm font-medium rounded-brand">Tout refuser</button>
+                    <button class="btn-primary-sm">Tout accepter</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <span class="text-xs text-graphite block">Skip Link (Accessibilité)</span>
+            <div class="bg-white p-6 rounded-brand border border-stone">
+                <p class="text-sm text-graphite mb-3">Présent sur tous les layouts. Visible au focus clavier.</p>
+                <code class="text-xs text-stone">class="skip-link"</code>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. RÈGLES D'HOMOGÉNÉITÉ -->
+<section class="border-t border-stone pt-16">
+    <h2 class="font-serif text-3xl text-ink mb-10 flex items-center gap-4">
+        <span class="text-stone font-sans text-xl font-bold">07.</span> Règles d'homogénéité
+    </h2>
+
+    <ul class="list-disc marker:text-flame marker:font-bold pl-6 space-y-4 text-graphite">
+        <li>Utiliser uniquement les tokens de couleur de la palette (`ink`, `cream`, `flame`, `graphite`, etc.).</li>
+        <li>Interdire les valeurs HEX en dur dans les classes utilitaires quand un token existe déjà.</li>
+        <li>Éviter les styles inline ; créer une classe dédiée dans la couche composants.</li>
+        <li>Utiliser les classes partagées (`btn-primary`, `btn-secondary`, `field-input`, `field-textarea`, `badge-severity-*`) pour garantir la cohérence.</li>
+        <li>Conserver la pile typographique officielle : Sans = Satoshi, Serif = Times New Roman.</li>
+    </ul>
 </section>
